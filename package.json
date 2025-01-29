@@ -1,0 +1,30 @@
+{
+  "name": "presken-new-website",
+  "version": "1.0.0",
+  "description": "New presken website",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js "
+  },
+  "author": "cybercode2000",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "debug": "^4.4.0",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.18.1",
+    "http-msgs": "^1.0.9",
+    "mongoose": "^8.8.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "twilio": "^5.3.7"
+  }
+}
