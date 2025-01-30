@@ -25,6 +25,10 @@ router.get("/ministries", async (req, res) => {
   res.render("ministries.ejs");
 });
 
+router.get("/gallery", async (req, res) => {
+    res.render("gallery.ejs");
+  });
+
 
 
 // router.get("/about", getAbout);
