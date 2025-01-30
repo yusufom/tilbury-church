@@ -21,29 +21,17 @@ const { getContact, postContact } = require("../controller/website/contact")
 router.get("/", getIndex);
 router.get("/about", getAbout);
 router.get("/contact", getContact);
+router.get("/ministries", async (req, res) => {
+  res.render("ministries.ejs");
+});
+
+
 
 // router.get("/about", getAbout);
 
 
 // router.post('/message', postContact);
 
-// router.get("/event", async (req, res) => {
-//   const setting = await Setting.find();
-//   const partner = await Partner.find();
-//   const event = await Events.find().limit(3);
-//   const eventa = await Events.find();
-//   const postpicture = await postPicture.find();
-//   const projectFooter = await Project.find().limit(3);
-
-//   res.render("frontEvent.ejs", {
-//     mySetting: setting[0],
-//     partner,
-//     event,
-//     postpicture,
-//     projectFooter,
-//     eventa,
-//   });
-// });
 
 
 
