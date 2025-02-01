@@ -1,762 +1,1088 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-    <%- include('partials/head/header.ejs'); %>
-    <body>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+    <title>Welcome - Christ Gospel Assembly (House of Prayer)</title>
+	<link rel="shortcut icon" type="image/x-icon" href="cga.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/slicknav.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link href="css/all.css" rel="stylesheet" media="screen">
+	<link href="css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/mousecursor.css">
+    <link rel="stylesheet" href="css/plyr.css">
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+</head>
+<body>
 
-        <%- include('partials/head/menubar.ejs'); %>
-        <main class="fix">
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+			<div id="loading-icon"><img style="height: 30px;" src="cga-main-logo.png" alt=""></div>
+		</div>
+	</div>
 
-            
-            <!-- <section class="banner-area">
-                <div>
-                    <div id="carouselExampleCaptions" class="carousel slide">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="1.jpg" class="d-block w-100" style="height: 95vh" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>First slide label</h5>
-                              <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="2.jpg" style="height: 95vh" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>Second slide label</h5>
-                              <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="3.jpg" style="height: 95vh" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>Third slide label</h5>
-                              <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                </div>
-            </section> -->
-
-            
-            <section class="home1-section2" id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-7 pt-80">
-                            <h2 class="ds-3 fw-normal" data-aos="fade-up">Welcome to the Family</h2>
-                            <p class="fs-6" data-aos="fade-up">
-                               Christ Gospel Assembly is a registered Christian religious charity organisation situated at Tilbury Town in Thurrock Essex, United Kingdom.
-                            </p>
-                            <div class="row mt-5">
-                                <div class="col-lg-6">
-                                    <img src="assets/images/home1/img-1.png" alt="Blessed" data-aos="flip-left">
-                                    <h5 class="mt-4 fw-medium">Our Vision Statement</h5>
-                                    <p data-aos="fade-up">
-                                        To expand the Kingdom of God in preparation for the second coming of Christ through the impartation of the Word.
-                                    </p>
-                                </div>
-                                <div class="col-lg-6">
-                                    <img src="assets/images/home1/img-2.png" alt="Blessed" data-aos="flip-left">
-                                    <h5 class="mt-4 fw-medium">Our Mision Statement</h5>
-                                    <p data-aos="fade-up">
-                                        Relentless evangelism and impartation of the Word of God, through sound teaching and effective prayers.
-                                    </p>
-                                </div>
-                                <div class="col-lg-6">
-                                    <img src="assets/images/home1/img-1.png" alt="Blessed" data-aos="flip-left">
-                                    <h5 class="mt-4 fw-medium">Our Statement of Belief</h5>
-                                    <p data-aos="fade-up">
-                                        God is the Creator and Ruler of the universe. Jesus Christ is the Son of God. The Holy Spirit is co-equal with the Father and the Son.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="z-3 up-event-cover rounded-3">
-                                <div class="up-event shadow-1 position-relative">
-                                    <h4 class="mb-2">Upcoming Events</h4>
-                                    <ul class="events-list p-0">
-                                        <li class="pt-3 pb-3" data-aos="fade-up">
-                                            <div class="d-flex gap-3">
-                                                <div class="event-date rounded-1 text-center">
-                                                    <h4 class="date mb-0 lh-1">29</h4>
-                                                    <span class="fs-8">Jan</span>
-                                                    <span class="fs-8">2025</span>
-                                                </div>
-                                                <div class="content">
-                                                    <p class="fs-6 mb-1">
-                                                        <a href="event-details.html" class="text-black">Wednesday Bible Study: We meet every Wednesday of the week to study the Word</a>
-                                                    </p>
-                                                    <span class="event-meta fs-8">
-                                                        <i class="fa fa-clock me-1"></i>
-                                                        7:00 pm – 8:00 pm
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="pt-3 pb-3" data-aos="fade-up">
-                                            <div class="d-flex gap-3">
-                                                <div class="event-date rounded-1 text-center">
-                                                    <h4 class="date mb-0 lh-1">31</h4>
-                                                    <span class="fs-8">Jan</span>
-                                                    <span class="fs-8">2025</span>
-                                                </div>
-                                                <div class="content">
-                                                    <p class="fs-6 mb-1">
-                                                        <a href="event-details.html" class="text-black">Friday Weekly Vigil: We meet for vigil every Friday of the week</a>
-                                                    </p>
-                                                    <span class="event-meta fs-8">
-                                                        <i class="fa fa-clock me-1"></i>
-                                                        10:00 pm – 12:00 am
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="pt-3 pb-3" data-aos="fade-up">
-                                            <div class="d-flex gap-3">
-                                                <div class="event-date rounded-1 text-center">
-                                                    <h4 class="date mb-0 lh-1">01</h4>
-                                                    <span class="fs-8">Feb</span>
-                                                    <span class="fs-8">2025</span>
-                                                </div>
-                                                <div class="content">
-                                                    <p class="fs-6 mb-1">
-                                                        <a href="event-details.html" class="text-black">Evangelism (Saturday Fortnightly): We meet for evangelism on Saturday twice in a month
-                                                            Conference</a>
-                                                    </p>
-                                                    <span class="event-meta fs-8">
-                                                        <i class="fa fa-clock me-1"></i>
-                                                        10:00 am – 12:00 pm
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="pt-3 pb-3">
-                                            <div class="d-flex gap-3">
-                                                <div class="event-date rounded-1 text-center">
-                                                    <h4 class="date mb-0 lh-1">02</h4>
-                                                    <span class="fs-8">Feb</span>
-                                                    <span class="fs-8">2025</span>
-                                                </div>
-                                                <div class="content">
-                                                    <p class="fs-6 mb-1">
-                                                        <a href="#" class="text-black">Sunday Service: Unity
-                                                            We meet every Sunday for fellowship</a>
-                                                    </p>
-                                                    <span class="event-meta fs-8">
-                                                        <i class="fa fa-clock me-1"></i>
-                                                        10:00 am – 12:30 pm
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
+	<header class="main-header">
+		<div class="header-sticky">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<a class="navbar-brand" href="#">
+						<img style="height: 50px" src="cga-main-logo.png" alt="Logo">
+					</a>
+					<div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item submenu"><a class="nav-link" href="/about">About Us</a>
+                                    <ul class="sub-menu">
+                                        <li class="nav-item"><a class="nav-link" href="/ministries">Statement of Beliefs</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Our Ministers</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Service Times</a></li>
                                     </ul>
-                                    <a href="#" class="btn btn-full" data-aos="fade-up">View More Events</a>
-                                    <img class="position-absolute top-0 right-5 tag" src="assets/images/home1/img-4.png" alt="Blessed">
-                                </div>
-                            </div>
+                                </li>                                
+                                <li class="nav-item"><a class="nav-link" href="#">Our Ministries</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="/event">Event</a>
+                                    <ul class="sub-menu">
+                                        <li class="nav-item"><a class="nav-link" href="/ministries">Events of the year</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Event calendar</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/prayer">Prayer Request</a></li>
+                                <li class="nav-item highlighted-menu"><a class="nav-link" href="#">donate now</a></li>                               
+                            </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="bg-animation">
-                    <img src="assets/images/home1/img-3.png" alt="Blessed" data-aos="fade-right" data-aos-delay="400" class="aos-init aos-animate img-bg">
-                </div>
-            </section>
-            <section class="home1-section3 position-relative" id="sermons-section">
-                <div class="container">
-                    <div class="row mb-5 align-items-end d-flex align-items-center">
-                        <div class="col-lg-10 col-md-8 mb-3 mb-lg-0">
-                            <div class="d-flex flex-column flex-xl-row gap-xl-5 align-items-xl-end">
-                                <div class="section-title tg-heading-subheading animation-style3">
-                                    <span class="sub-title">Sacred Teachings</span>
-                                    <h5 class="title tg-element-title">Explore Our Sermons</h5>
-                                </div>
-                                <p class="fs-5 w-lg-50 mb-0">
-                                    Delve into the Heart of Spiritual Insight with Our Thought-Provoking Sermons
-                                </p>
-                            </div>
+                        <div class="header-btn d-inline-flex">
+                            <a href="#" class="btn-default">donate now</a>
                         </div>
-                        <div class="col-lg-2 col-md-4 d-none d-md-block">
-                            <div class="d-flex justify-content-end align-items-end">
-                                <div class="swiper-button-prev swiper-button-prev-style-1 swiper-button-prev-animate">
-                                    <i class="size-24" data-feather="arrow-left"></i>
-                                </div>
-                                <div class="swiper-button-next swiper-button-next-style-1 swiper-button-next-animate">
-                                    <i class="size-24" data-feather="arrow-right"></i>
-                                </div>
+					</div>
+					<div class="navbar-toggle"></div>
+				</div>
+			</nav>
+			<div class="responsive-menu"></div>
+		</div>
+	</header>
+
+	<div class="hero hero-slider">
+        <div class="hero-slider-layout">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="hero-slide">
+                            <div class="hero-slider-image">
+                                <img src="images/hero-bg.jpg" alt="">
                             </div>
-                        </div>
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="col-12 position-relative">
-                            <div class="box-swiper-padding">
-                                <div class="swiper-container blessed-sermon-slider-one">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="postion-relative">
-                                                <div class="project__item-four">
-                                                    <div class="project__thumb-four">
-                                                        <a href="#"><img src="pic-1.jpg" alt="Blessed"></a>
-                                                    </div>
-                                                    <div class="project__content-four">
-                                                        <div class="left-content">
-                                                            <h4 class="title text-white">
-                                                                <a href="#">Preaching Worship An Online Family</a>
-                                                            </h4>
-                                                            <p class="fs-7 text-white des">
-                                                                In the depths of our souls lies an eternal yearning, a longing to
-                                                                connect with something greater than ourselves.
-                                                            </p>
-                                                            <span>Sermon By: Jackson West</span>
-                                                        </div>
-                                                        <div class="more-details d-flex gap-2 mt-4">
-                                                            <div class="icons d-flex gap-2 align-items-center">
-                                                                <a href="https://www.youtube.com/watch?v=QIjIvvHGJ9E" target="_blank" title="Watch Now"><i class="fab fa-youtube"></i></a>
-                                                                <a href="https://soundcloud.com/janmorgenstern/sets/big-buck-bunny" title="listen audio" target="_blank"><i class="fas fa-headphones"></i></a>
-
-                                                                <a href="assets/sample-zip/sample-zip-file.zip" title="Download" download=""><i class="fas fa-cloud-download-alt"></i></a>
-
-                                                                <a href="assets/sample-pdf/sermon.pdf" title="Download PDF" download><i class="far fa-file-pdf"></i></a>
-
-                                                            </div>
-                                                            <a href="#" class="btn d-flex gap-1 btn-rounded-1">
-                                                                <span>View Details</span>
-                                                                <i class="size-12" data-feather="arrow-right"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-12">
+                                        <div class="hero-content">
+                                            <div class="section-title">
+                                                <h3 class="wow fadeInUp">Obedience to jesus christ</h3>
+                                                <h1 class="text-anime-style-2" data-cursor="-opaque">OUR KEY priority</h1>
+                                                <p class="wow fadeInUp" data-wow-delay="0.25s">Enjoy every single moment. The good, the bad, the beautiful, by dying on a cross. He arose from the dead after three days to demonstrate His power over sin and death.  </p>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="postion-relative">
-                                                <div class="project__item-four">
-                                                    <div class="project__thumb-four">
-                                                        <a href="#"><img src="pic-2.jpg" alt="Blessed"></a>
-                                                    </div>
-                                                    <div class="project__content-four">
-                                                        <div class="left-content">
-                                                            <h4 class="title text-white">
-                                                                <a href="#">Preaching Worship An Online Family</a>
-                                                            </h4>
-                                                            <p class="fs-7 text-white des">
-                                                                In the depths of our souls lies an eternal yearning, a longing to
-                                                                connect with something greater than ourselves.
-                                                            </p>
-                                                            <span>Sermon By: Jackson West</span>
-                                                        </div>
-                                                        <div class="more-details d-flex gap-2 mt-4">
-                                                            <div class="icons d-flex gap-2 align-items-center">
-                                                                <a href="https://www.youtube.com/watch?v=QIjIvvHGJ9E" target="_blank" title="Watch Now"><i class="fab fa-youtube"></i></a>
-                                                                <a href="https://soundcloud.com/janmorgenstern/sets/big-buck-bunny" title="listen audio" target="_blank"><i class="fas fa-headphones"></i></a>
-
-                                                                <a href="assets/sample-zip/sample-zip-file.zip" title="Download" download=""><i class="fas fa-cloud-download-alt"></i></a>
-
-                                                                <a href="assets/sample-pdf/sermon.pdf" title="Download PDF" download><i class="far fa-file-pdf"></i></a>
-
-                                                            </div>
-                                                            <a href="#" class="btn d-flex gap-1 btn-rounded-1">
-                                                                <span>View Details</span>
-                                                                <i class="size-12" data-feather="arrow-right"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="postion-relative">
-                                                <div class="project__item-four">
-                                                    <div class="project__thumb-four">
-                                                        <a href="#"><img src="assets/images/home1/sermons-3.png" alt="Blessed"></a>
-                                                    </div>
-                                                    <div class="project__content-four">
-                                                        <div class="left-content">
-                                                            <h4 class="title text-white">
-                                                                <a href="#">Sunday Sermon from the Church</a>
-                                                            </h4>
-                                                            <p class="fs-7 text-white des">
-                                                                In the depths of our souls lies an eternal yearning, a longing to
-                                                                connect with something greater than ourselves.
-                                                            </p>
-                                                            <span>Sermon By: Jackson West</span>
-                                                        </div>
-                                                        <div class="more-details d-flex gap-2 mt-4">
-                                                            <div class="icons d-flex gap-2 align-items-center">
-                                                                <a href="https://www.youtube.com/watch?v=QIjIvvHGJ9E" target="_blank" title="Watch Now"><i class="fab fa-youtube"></i></a>
-                                                                <a href="https://soundcloud.com/janmorgenstern/sets/big-buck-bunny" title="listen audio" target="_blank"><i class="fas fa-headphones"></i></a>
-
-                                                                <a href="assets/sample-zip/sample-zip-file.zip" title="Download" download=""><i class="fas fa-cloud-download-alt"></i></a>
-
-                                                                <a href="assets/sample-pdf/sermon.pdf" title="Download PDF" download><i class="far fa-file-pdf"></i></a>
-
-                                                            </div>
-                                                            <a href="#" class="btn d-flex gap-1 btn-rounded-1">
-                                                                <span>View Details</span>
-                                                                <i class="size-12" data-feather="arrow-right"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="postion-relative">
-                                                <div class="project__item-four">
-                                                    <div class="project__thumb-four">
-                                                        <a href="#"><img src="assets/images/home1/sermons-4.png" alt="Blessed"></a>
-                                                    </div>
-                                                    <div class="project__content-four">
-                                                        <div class="left-content">
-                                                            <h4 class="title text-white">
-                                                                <a href="#">Christmas Doing God’s Will Better</a>
-                                                            </h4>
-                                                            <p class="fs-7 text-white des">
-                                                                In the depths of our souls lies an eternal yearning, a longing to
-                                                                connect with something greater than ourselves.
-                                                            </p>
-                                                            <span>Sermon By: Jackson West</span>
-                                                        </div>
-                                                        <div class="more-details d-flex gap-2 mt-4">
-                                                            <div class="icons d-flex gap-2 align-items-center">
-                                                                <a href="https://www.youtube.com/watch?v=QIjIvvHGJ9E" target="_blank" title="Watch Now"><i class="fab fa-youtube"></i></a>
-                                                                <a href="https://soundcloud.com/janmorgenstern/sets/big-buck-bunny" title="listen audio" target="_blank"><i class="fas fa-headphones"></i></a>
-
-                                                                <a href="assets/sample-zip/sample-zip-file.zip" title="Download" download=""><i class="fas fa-cloud-download-alt"></i></a>
-
-                                                                <a href="assets/sample-pdf/sermon.pdf" title="Download PDF" download><i class="far fa-file-pdf"></i></a>
-
-                                                            </div>
-                                                            <a href="#" class="btn d-flex gap-1 btn-rounded-1">
-                                                                <span>View Details</span>
-                                                                <i class="size-12" data-feather="arrow-right"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="postion-relative">
-                                                <div class="project__item-four">
-                                                    <div class="project__thumb-four">
-                                                        <a href="#"><img src="assets/images/home1/sermons-5.png" alt="Blessed"></a>
-                                                    </div>
-                                                    <div class="project__content-four">
-                                                        <div class="left-content">
-                                                            <h4 class="title text-white">
-                                                                <a href="#">Christmas Doing God’s Will Better</a>
-                                                            </h4>
-                                                            <p class="fs-7 text-white des">
-                                                                In the depths of our souls lies an eternal yearning, a longing to
-                                                                connect with something greater than ourselves.
-                                                            </p>
-                                                            <span>Sermon By: Jackson West</span>
-                                                        </div>
-                                                        <div class="more-details d-flex gap-2 mt-4">
-                                                            <div class="icons d-flex gap-2 align-items-center">
-                                                                <a href="https://www.youtube.com/watch?v=QIjIvvHGJ9E" target="_blank" title="Watch Now"><i class="fab fa-youtube"></i></a>
-                                                                <a href="https://soundcloud.com/janmorgenstern/sets/big-buck-bunny" title="listen audio" target="_blank"><i class="fas fa-headphones"></i></a>
-
-                                                                <a href="assets/sample-zip/sample-zip-file.zip" title="Download" download=""><i class="fas fa-cloud-download-alt"></i></a>
-
-                                                                <a href="assets/sample-pdf/sermon.pdf" title="Download PDF" download><i class="far fa-file-pdf"></i></a>
-
-                                                            </div>
-                                                            <a href="#" class="btn d-flex gap-1 btn-rounded-1">
-                                                                <span>View Details</span>
-                                                                <i class="size-12" data-feather="arrow-right"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                    
+                                            <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
+                                                <a href="#" class="btn-default"><span>join in person</span></a>
+                                                <a href="#" class="btn-default btn-highlighted"><span>donate now</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 text-center mt-3">
-                            <div class="blessed-sermon-slider-one-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wrap-asset position-absolute top-50 left-5 ms-5">
-                    <img class="alltuchtopdown" src="assets/images/sermon-details/cornflower-bgr.png" alt="Blessed">
-                </div>
-            </section>
-
-
-            <section class="section-4">
-                <div class="container-fluid">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="sec4 py-5 d-flex align-items-center justify-content-between">
-                                    <div class="content d-flex align-items-center gap-4">
-                                        <img src="assets/images/home1/img-sec4.png" alt="Blessed" data-aos="zoom-in">
-                                        <h4 class="d-sm-inline-flex text-white mb-0 fw-normal animation-style3" data-aos="flip-up">
-                                            “Pray! And listen to God! You can do this alone, but find somebody to do it with you”
-                                        </h4>
-                                    </div>
-                                    <a href="#" class="btn mt-4 mt-xl-0 btn-white rounded-5 btn-circle-arrow" data-aos="flip-down">
-                                        <span class="text">Donation Now</span>
-                                        <span class="bg-transparent ms-2">
-                                            <i class="size-16" data-feather="arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Blessed Donation Section
-            ============================= -->
-            <section class="section-5 position-relative">
-                <div class="container">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-lg-6 d-flex align-content-start flex-wrap pe-lg-4">
-                            <div class="d-flex gap-5 align-items-end" data-aos="fade-up">
-                                <div class="section-title">
-                                    <span class="sub-title">This April</span>
-                                </div>
-                            </div>
-                            <h2 class="fw-normal" data-aos="fade-up">Make a Donation & Become a Part of Something Great</h2>
-                            <p data-aos="fade-up">
-                                We enjoy being a multi-denominational church where we work together, worship together, and grow
-                                together.
-                            </p>
-                            <p class="mb-5" data-aos="fade-up">
-                                People and children of all ages here are encouraged to learn about their own faith and the role of
-                                the church in our community and worldwide.
-                            </p>
-                            <a href="#" class="btn text-white rounded-5 btn-circle-arrow" data-aos="flip-up">
-                                <span>Donation Now</span>
-                                <span class="bg-transparent ms-2">
-                                    <i class="size-16" data-feather="arrow-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 ps-lg-4 pt-lg-0 pt-5">
-                            <img style="height: 500px" class="img-donation" src="chrismas.jpg" data-aos="fade-zoom-in" alt="Blessed">
-                            <div class="text-box position-relative d-flex align-items-center" data-parallax='{"x" : 50 , "y" : -50 }'>
-                                <h1 class="mb-0 p-4">90</h1>
-                                <p class="mb-0 has-left-line">Children were helped this week</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wrap-asset position-absolute">
-                    <img class="alltuchtopdown" src="assets/images/home1/img-sec-5.png" alt="Blessed">
-                </div>
-            </section>
-
-            <!-- Blessed Worship Section
-            ============================ -->
-            <section class="section-6 position-relative">
-                <div class="container">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-lg-6 pe-lg-4">
-                            <div class="position-relative">
-                                <div class="background">
-                                    <img src="pic-3.jpg" alt="Blessed" data-aos="fade-zoom-in">
-                                </div>
-                                <div class="card-float position-absolute br-4 alltuchtopdown">
-                                    <div class="card-float-top rounded-top-1">
-                                        <img class="mb-2" src="assets/images/home1/book-card-sec6.png" alt="Blessed" data-aos="fade-up">
-                                        <p class="mb-0 pt-2 fs-7 text-dark">Reach out to us for support, counseling, or prayer.</p>
-                                    </div>
-                                    <div class="rounded-bottom-1 card-float-bot d-flex align-items-center justify-content-center">
-                                        <p class="text-white mb-0">Start Your Journey</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 d-flex align-content-start flex-wrap pt-lg-0 pt-5 ps-lg-4">
-                            <div class="d-flex gap-5 align-items-end" data-aos="fade-up">
-                                <div class="section-title">
-                                    <span class="sub-title">Experience Serenity</span>
-                                </div>
-                            </div>
-                            <h2 class="fw-normal ds-5" data-aos="fade-up">Experience The Uplifting Power of Communal Worship</h2>
-                            <p class="fs-6" data-aos="fade-up">
-                                Join our congregation for inspiring services filled with music, prayer, and spiritual reflection.
-                                Become an active part of our vibrant community. Volunteer for our various committees, participate in
-                                social activities, or lend your talents to our worship services.
-                            </p>
-                            <a href="tel:2295550109" class="pt-2 d-flex align-items-center" data-aos="flip-up">
-                                <span class="icon text-white me-4">
-                                    <i class="size-26" data-feather="users"></i>
-                                </span>
-                                <div class="contact">
-                                    <p class="fw-light fs-6 mb-2">Do you have any question?</p>
-                                    <p class="fs-3 mb-0 phone-num">(+44) (0)1375844355</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="wrap-asset position-absolute">
-                    <img src="assets/images/home1/img-sec-6.png" alt="Blessed" data-parallax='{"x" : 100 , "y" : -200 }'>
-                </div>
-            </section>
-
-            <!-- Blessed Donation Call to Action Section
-            ============================================ -->
-            <section class="section-7">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="container">
-                            <div class="col-12">
-                                <div class="d-flex align-items-center justify-content-center flex-column mb-3">
-                                    <h4 class="text-white mb-0 fw-normal text-center ds-5 w-80 mb-4" data-aos="flip-up">
-                                        "Pray! Tune into God's voice! While you can pray alone, seek companionship in your spiritual
-                                        journey."
-                                    </h4>
-                                    <div class="d-flex gap-2" data-aos="flip-up">
-                                        <a href="javascript:" class="btn text-white rounded-5 btn-circle-arrow menu-tigger">
-                                            <span>Request A Prayer</span>
-                                            <span class="bg-transparent ms-2">
-                                                <i class="size-16" data-feather="arrow-right"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#" class="btn btn-white rounded-5 btn-circle-arrow" data-aos="flip-up">
-                                            <span class="text">Donation Now</span>
-                                            <span class="bg-transparent ms-2">
-                                                <i class="size-16" data-feather="arrow-right"></i>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Counter Section
-            ==================== -->
-            <section class="counter-area">
-                <div class="container">
-                    <div class="inner">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-3 col-lg-4 col-sm-6 mb-md-3">
-                                <div class="counter-item-cover counter-item" data-aos="flip-up">
-                                    <div class="content text-center mx-auto">
-                                        <h2 class="count"><span class="odometer" data-count="25"></span>+</h2>
-                                        <h4 class="mb-0" data-aos="flip-up">Sermons</h4>
-                                        <p class="fs-6" data-aos="flip-up">Every week</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6 mb-md-3">
-                                <div class="counter-item-cover counter-item" data-aos="flip-up">
-                                    <div class="content text-center mx-auto">
-                                        <h2 class="count"><span class="odometer" data-count="14"></span>+</h2>
-                                        <h4 class="mb-0" data-aos="flip-up">Campuses</h4>
-                                        <p class="fs-6" data-aos="flip-up">Every week</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <div class="counter-item-cover counter-item" data-aos="flip-up">
-                                    <div class=" content text-center mx-auto">
-                                        <h2 class="count"><span class="odometer" data-count="12"></span>+</h2>
-                                        <h4 class="mb-0" data-aos="flip-up">Pastors</h4>
-                                        <p class="fs-6" data-aos="flip-up">Every week</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <div class="counter-item-cover counter-item" data-aos="flip-up">
-                                    <div class=" content text-center mx-auto">
-                                        <h2 class="count"><span class="odometer" data-count="52"></span>+</h2>
-                                        <h4 class="mb-0" data-aos="flip-up">Groups</h4>
-                                        <p class="fs-6" data-aos="flip-up">Every week</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Our Team Section
-            ===================== -->
-            <section class="position-relative">
-                <div class="container">
-
-                    <div class="row mb-5 align-items-end align-items-center">
-                        <div class="col-lg-7 col-md-8 mb-3 mb-lg-0">
-                            <div class="section-title tg-heading-subheading animation-style3">
-                                <span class="sub-title">Church Ministers</span>
-                                <h5 class="title tg-element-title">Get Acquainted with Our Exceptional Clergy Team</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-4 d-none d-md-block">
-                            <div class="d-flex justify-content-end align-items-end">
-                                <div class="swiper-button-prev swiper-button-prev-style-1 swiper-button-prev-4">
-                                    <i class="size-24" data-feather="arrow-left"></i>
-                                </div>
-                                <div class="swiper-button-next swiper-button-next-style-1 swiper-button-next-4">
-                                    <i class="size-24" data-feather="arrow-right"></i>
-                                </div>
+                            <div class="down-arrow">
+                                <a href="#home-about"><i class="fa-solid fa-arrow-down-long"></i></a>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="pastor-sliders">
-
-                        <div class="swiper-container blessed-team">
-                            <div class="swiper-wrapper pt-2">
-                                <div class="swiper-slide hover-up">
-                                    <div class="team-style-01 team-style-02">
-                                        <figure class="mb-0 position-relative">
-                                            <a href="#">
-                                                <img style="height: 320px" src="pastor1.jpg" alt="Blessed">
-                                            </a>
-                                            <figcaption class="w-100 p-20px lg-p-25px text-center">
-                                                <div class="position-relative z-3">
-                                                    <p class="d-block fw-600 fs-5 text-dark mb-0">
-                                                        <a href="#">Pastor Esther Ogunniyi</a>
-                                                    </p>
-                                                    <p class="fs-7">General Overseer</p>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide hover-up">
-                                    <div class="team-style-01 team-style-02">
-                                        <figure class="mb-0 position-relative">
-                                            <a href="#">
-                                                <img style="height: 320px" src="pastor2.jpg" alt="Blessed">
-                                            </a>
-                                            <figcaption class="w-100 p-20px lg-p-25px text-center">
-                                                <div class="position-relative z-3">
-                                                    <p class="d-block fw-600 fs-5 text-dark mb-0">
-                                                        <a href="#">Pastor Zacchaeus Akin-Olushola</a>
-                                                    </p>
-                                                    <p class="fs-7">Senior Pastor</p>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide hover-up">
-                                    <div class="team-style-01 team-style-02">
-                                        <figure class="mb-0 position-relative">
-                                            <a href="#">
-                                                <img style="height: 320px" src="pastor3.jpg" alt="Blessed">
-                                            </a>
-                                            <figcaption class="w-100 p-20px lg-p-25px text-center">
-                                                <div class="position-relative z-3">
-                                                    <p class="d-block fw-600 fs-5 text-dark mb-0">
-                                                        <a href="#">Minister Adebayo Oluwadare</a>
-                                                    </p>
-                                                    <p class="fs-7">Assistant Pastor</p>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
+                    
+                    <div class="swiper-slide">
+                        <div class="hero-slide">
+                            <div class="hero-slider-image">
+                                <img src="images/hero-bg-2.jpg" alt="">
+                            </div>
+                            
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-12">
+                                        <div class="hero-content">
+                                            <div class="section-title">
+                                                <h3 class="wow fadeInUp">Experience God’s Presence </h3>
+                                                <h1 class="text-anime-style-2" data-cursor="-opaque">THE CHURCH THAT CARES </h1>
+                                                <p class="wow fadeInUp" data-wow-delay="0.25s">Enjoy every single moment. The good, the bad, the beautiful, the ugly, the inspiring, the not-so-glamorous moments. and Thank God through it all. </p>
+                                            </div>
+                                            <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
+                                                <a href="#" class="btn-default"><span>join in person</span></a>
+                                                <a href="#" class="btn-default btn-highlighted"><span>donate now</span></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="down-arrow">
+                                <a href="#home-about"><i class="fa-solid fa-arrow-down-long"></i></a>
+                            </div>
                         </div>
-
-                        <div class="col-12 text-center mb-3">
-                            <div class="blessed-team-pagination"></div>
-                        </div>
-
                     </div>
-                </div>
-                <div class="wrap-asset position-absolute top-50 left-5 ms-5">
-                    <img class="alltuchtopdown" src="assets/images/home1/img-sec-8.png" alt="Blessed">
-                </div>
-            </section>
-
-            <div class="box-swiper">
-                <div class="swiper-container swiper-6-items">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img style="height: 230px" src="1.jpg" alt="Blessed">
-                        </div>
-                        <div class="swiper-slide">
-                            <img style="height: 230px" src="2.jpg" alt="Blessed">
-                        </div>
-                        <div class="swiper-slide">
-                            <img style="height: 230px" src="3.jpg" alt="Blessed">
-                        </div>
-                        <div class="swiper-slide">
-                            <img style="height: 230px" src="4.jpg" alt="Blessed">
-                        </div>
-                        <div class="swiper-slide">
-                            <img style="height: 230px" src="5.jpg" alt="Blessed">
-                        </div>
-                        <div class="swiper-slide">
-                            <img style="height: 230px" src="6.jpg" alt="Blessed">
-                        </div>
-                        <div class="swiper-slide">
-                            <img style="height: 230px" src="7.jpg" alt="Blessed">
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="section-13 position-relative py-5">
-                <div class="container">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-xl-6 col-12 text-start text-xxl-start text-xl-start text-center mb-xxl-0 mb-xl-0 mb-3">
-                            <h2 class=" fs-1 text-dark">Abundant Resources</h2>
-                            <p class="mb-0 fw-regular fs-6">Access a wealth of spiritual resources with <br>over 56 sermons
-                                available each week.
-                            </p>
-                        </div>
-                        <div class="col-xl-6 col-12 text-end text-xxl-end text-xl-end text-lg-center text-center">
-                            <div class="mt-4 mt-lg-0">
-                                <a href="mailto:info@christgospelassembly.org.uk" class="btn text-white rounded-5 me-2">
-                                    <span class="bg-transparent me-2">
-                                        <i class="size-16" data-feather="mail"></i>
-                                    </span>
-                                    <span>Send Us Email</span>
-                                </a>
-                                <a href="tel:+44 (0)1375844355" class="btn btn-dark btn-white rounded-5">
-                                    <span class="bg-transparent-sec-13 me-2">
-                                        <i class="size-16" data-feather="phone"></i>
-                                    </span>
-                                    <span>+44 (0)1375844355</span>
-                                </a>
+                    <div class="swiper-slide">
+                        <div class="hero-slide">
+                            <div class="hero-slider-image">
+                                <img src="images/hero-bg-2.jpg" alt="">
+                            </div>
+                            
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-12">
+                                        <div class="hero-content">
+                                            <div class="section-title">
+                                                <h3 class="wow fadeInUp">We desire to please & honour God</h3>
+                                                <h1 class="text-anime-style-2" data-cursor="-opaque">IN ALL THAT WE DO</h1>
+                                                <p class="wow fadeInUp" data-wow-delay="0.25s">No matter who you are or where you come from, you will always find friends that are like family in Christ Gospel Assembly. We owe our continuous existence to the Grace of God that was sufficient for us. </p>
+                                            </div>
+                                            <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
+                                                <a href="#" class="btn-default"><span>join in person</span></a>
+                                                <a href="#" class="btn-default btn-highlighted"><span>donate now</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="down-arrow">
+                                <a href="#home-about"><i class="fa-solid fa-arrow-down-long"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="wrap-asset-13 position-absolute">
-                    <img class="asset-top-down" src="assets/images/home1/img-sec-13.png" alt="Blessed">
+                <div class="hero-pagination"></div>
+            </div>
+        </div>		
+	</div>
+
+    <div class="our-scrolling-ticker">
+        <div class="scrolling-ticker-box">
+            <div class="scrolling-content">
+                <span><img src="images/icon-sparkles.svg" alt="">Love Your Neighbor as yourself</span>
+                <span><img src="images/icon-sparkles.svg" alt="">Love Your Neighbor as yourself</span>
+                <span><img src="images/icon-sparkles.svg" alt="">Love Your Neighbor as yourself</span>
+                <span><img src="images/icon-sparkles.svg" alt="">Love Your Neighbor as yourself</span>
+                <span><img src="images/icon-sparkles.svg" alt="">Love Your Neighbor as yourself</span>
+            </div>
+
+            <div class="scrolling-content">
+                <span><img src="images/icon-sparkles.svg" alt="">Love Your Neighbor as yourself</span>
+                <span><img src="images/icon-sparkles.svg" alt="">Love Your Neighbor as yourself</span>
+                <span><img src="images/icon-sparkles.svg" alt="">Love Your Neighbor as yourself</span>
+                <span><img src="images/icon-sparkles.svg" alt="">Love Your Neighbor as yourself</span>
+                <span><img src="images/icon-sparkles.svg" alt="">Love Your Neighbor as yourself</span>
+            </div>
+        </div>
+    </div>
+	<div class="about-us" id="home-about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <div class="about-img-1">
+                            <figure class="image-anime reveal">
+                                <img src="images/about-us-img-1.jpg" alt="">
+                            </figure>
+                        </div>
+
+                        <div class="about-img-2">
+                            <figure class="image-anime reveal">
+                                <img src="images/about-us-img-2.jpg" alt="">
+                            </figure>
+                        </div>
+                    </div>
                 </div>
-                <div class="wrap-asset-13-1 position-absolute">
-                    <img class="asset-top-down" src="assets/images/home1/img-sec-13.1.png" alt="Blessed">
+
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">about us</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Welcome to the  <span>Family</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.25s">Christ Gospel Assembly is a registered Christian religious charity organisation situated at Tilbury Town in Thurrock Essex, United Kingdom.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.5s"><b>Our Vision Statement</b>: To expand the Kingdom of God in preparation for the second coming of Christ through the impartation of the Word.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.5s"><b>Our Mision Statement</b>: Relentless evangelism and impartation of the Word of God, through sound teaching and effective prayers.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.5s"><b>Our Statement of Belief</b>: God is the Creator and Ruler of the universe. Jesus Christ is the Son of God. The Holy Spirit is co-equal with the Father and the Son.</p>
+                        </div>
+                        <div class="about-content-body">
+                            <div class="about-list-item wow fadeInUp">
+                                <div class="icon-box">
+                                    <img src="images/icon-about-list-1.svg" alt="">
+                                </div>
+                                <div class="about-list-item-content">
+                                    <h3>share god's love</h3>
+                                </div>
+                            </div>
+                            <div class="about-list-item wow fadeInUp" data-wow-delay="0.25s">
+                                <div class="icon-box">
+                                    <img src="images/icon-about-list-2.svg" alt="">
+                                </div>
+                                <div class="about-list-item-content">
+                                    <h3>foster spiritual growth</h3>
+                                </div>
+                            </div>
+
+                            <div class="about-list-item wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="icon-box">
+                                    <img src="images/icon-about-list-3.svg" alt="">
+                                </div>
+                                <div class="about-list-item-content">
+                                    <h3>serve our community</h3>
+                                </div>
+                            </div>
+                            <div class="about-list-item wow fadeInUp" data-wow-delay="0.75s">
+                                <div class="icon-box">
+                                    <img src="images/icon-about-list-4.svg" alt="">
+                                </div>
+                                <div class="about-list-item-content">
+                                    <h3>build strong relationships</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-us-footer wow fadeInUp" data-wow-delay="1s">
+                            <a href="/about" class="btn-default">read more about us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="join-worship">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">worship with us</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Join us on Sunday at <span>10:00 - 12:30 AM</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="highlighted-worship-item wow fadeInUp">
+                        <div class="highlighted-worship-image">
+                            <figure>
+                                <a href="#" class="image-anime" data-cursor-text="View">
+                                    <img src="images/join-worship-img-1.jpg" alt="">
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="highlighted-worship-body">
+                            <div class="highlighted-worship-content">
+                                <h3>Sunday Service</h3>
+                                <p>We meet every Sunday for fellowship between 10:00 am – 12:30 pm</p>
+                            </div>
+                            <div class="highlighted-worship-btn">
+                                <a href="#" class="readmore-btn"><img src="images/arrow-white.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="worship-box">
+                        <div class="worship-item wow fadeInUp" data-wow-delay="0.25s">
+                            <div class="worship-image">
+                                <figure>
+                                    <a href="#" class="image-anime" data-cursor-text="View">
+                                        <img src="images/join-worship-img-2.jpg" alt="">
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="worship-body">
+                                <div class="worship-content">
+                                    <h3>Wednesday Bible Study</h3>
+                                    <p>We meet every Wednesday of the week to study the Word between 7:00 pm – 8:00 pm.</p>
+                                </div>
+                                <div class="worship-btn">
+                                    <a href="#" class="readmore-btn"><img src="images/arrow-white.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="worship-item wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="worship-image">
+                                <figure>
+                                    <a href="#" class="image-anime" data-cursor-text="View">
+                                        <img src="images/join-worship-img-3.jpg" alt="">
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="worship-body">
+                                <div class="worship-content">
+                                    <h3>Friday Weekly Vigil </h3>
+                                    <p>We meet for vigil every Friday of the week between 10:00 pm – 12:00 am.</p>
+                                </div>
+                                <div class="worship-btn">
+                                    <a href="#" class="readmore-btn"><img src="images/arrow-white.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="worship-item wow fadeInUp" data-wow-delay="0.75s">
+                            <div class="worship-image">
+                                <figure>
+                                    <a href="#" class="image-anime" data-cursor-text="View">
+                                        <img src="images/join-worship-img-4.jpg" alt="">
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="worship-body">
+                                <div class="worship-content">
+                                    <h3>Evangelism (Saturday Fortnightly)</h3>
+                                    <p>We meet for evangelism on Saturday twice in a month between 10:00 am – 12:00 pm.</p>
+                                </div>
+                                <div class="worship-btn">
+                                    <a href="#" class="readmore-btn"><img src="images/arrow-white.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our-counter">
+        <div class="container">
+            <div class="row counter-box">
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item">
+                        <div class="counter-title">
+                            <h2><span class="counter">350</span>+</h2>
+                        </div>
+                        <div class="counter-content">
+                            <h3>oldest member</h3>
+                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item">
+                        <div class="counter-title">
+                            <h2><span class="counter">98</span>+</h2>
+                        </div>
+                        <div class="counter-content">                            
+                            <h3>youth retreats</h3>
+                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item">
+                        <div class="counter-title">
+                            <h2><span class="counter">148</span>+</h2>                            
+                        </div>
+                        <div class="counter-content">
+                            <h3>tech workshops</h3>
+                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item">
+                        <div class="counter-title">
+                            <h2><span class="counter">58</span>+</h2>
+                        </div>
+                        <div class="counter-content">
+                            <h3>christmas concert</h3>
+                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="our-mission">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="mission-content">
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">We Love God</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">We Believe in <span>God</span></h2>
+                        </div>
+                        <div class="mission-content-body">
+                            <p class="wow fadeInUp" data-wow-delay="0.5s">We believe that God is the Creator and Ruler of the universe. He has eternally existed in three persons: the Father, the Son, and the Holy Spirit. These three are co-equal and are one God.</p>
+                        </div>
+                        <div class="mission-content-footer wow fadeInUp" data-wow-delay="0.75s">
+                            <a href="/contact" class="btn-default">contact now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="mission-image">
+                        <div class="mission-img">
+                            <figure class="image-anime reveal">
+                                <img src="images/mission-image.jpg" alt="">
+                            </figure>
+                        </div>
+                        <div class="mission-life-circle">
+                            <img src="images/mission-life-circle-img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="our-services">
+        <div class="container">
+            <div class="row section-row">
+                <div class="section-title">
+                    <h3 class="wow fadeInUp">services</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">Loving god, helping others and serving the <span>world together</span></h2>
                 </div>
             </div>
 
-        </main>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item wow fadeInUp">
+                        <div class="icon-box">
+                            <img src="images/icon-service-1.svg" alt="">
+                        </div>
+                        <div class="service-body">
+                            <p>Compassionate support for grief, relationships, and personal struggles. Join our monthly groups or schedule counseling.</p>
+                        </div>
+                        <div class="service-footer">
+                            <div class="service-content">
+                                <h3>support groups</h3>
+                            </div>
+                            <div class="service-btn">
+                                <a href="#" class="readmore-btn"><img src="images/arrow-white.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        
-        <%- include('partials/head/footer.ejs'); %>
-    </body>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="icon-box">
+                            <img src="images/icon-service-2.svg" alt="">
+                        </div>
+                        <div class="service-body">
+                            <p>Join us for special events, including holiday services, picnics, and community fundraisers throughout the year.</p>
+                        </div>
+                        <div class="service-footer">
+                            <div class="service-content">
+                                <h3>special events</h3>
+                            </div>
+                            <div class="service-btn">
+                                <a href="#" class="readmore-btn"><img src="images/arrow-white.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="icon-box">
+                            <img src="images/icon-service-3.svg" alt="">
+                        </div>
+                        <div class="service-body">
+                            <p>Join our online services for live streams of Sunday worship, virtual Bible studies, and interactive prayer meetings from anywhere.</p>
+                        </div>
+                        <div class="service-footer">
+                            <div class="service-content">
+                                <h3>online services</h3>
+                            </div>
+                            <div class="service-btn">
+                                <a href="#" class="readmore-btn"><img src="images/arrow-white.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item wow fadeInUp" data-wow-delay="0.75s">
+                        <div class="icon-box">
+                            <img src="images/icon-service-4.svg" alt="">
+                        </div>
+                        <div class="service-body">
+                            <p>Receive compassionate pastoral care through one-on-one counseling  and  visits, addressing spiritual needs and personal challenges with care.</p>
+                        </div>
+                        <div class="service-footer">
+                            <div class="service-content">
+                                <h3>pastoral care</h3>
+                            </div>
+                            <div class="service-btn">
+                                <a href="#" class="readmore-btn"><img src="images/arrow-white.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	<div class="service-ticker">
+		<div class="scrolling-ticker">
+            <div class="scrolling-ticker-box">
+                <div class="scrolling-content">
+                    <span><img src="images/icon-asterisk.svg" alt="">Hope Of All</span>					
+                    <span><img src="images/icon-asterisk.svg" alt="">Hope Of All</span>				
+                    <span><img src="images/icon-asterisk.svg" alt="">Hope Of All</span>				
+                    <span><img src="images/icon-asterisk.svg" alt="">Hope Of All</span>				
+                    <span><img src="images/icon-asterisk.svg" alt="">Hope Of All</span>				
+                </div>
+
+                <div class="scrolling-content">
+                    <span><img src="images/icon-asterisk.svg" alt="">Hope Of All</span>					
+                    <span><img src="images/icon-asterisk.svg" alt="">Hope Of All</span>				
+                    <span><img src="images/icon-asterisk.svg" alt="">Hope Of All</span>				
+                    <span><img src="images/icon-asterisk.svg" alt="">Hope Of All</span>				
+                    <span><img src="images/icon-asterisk.svg" alt="">Hope Of All</span>
+                </div>
+            </div>
+        </div>
+	</div>
+
+    <div class="our-ministries">
+        <div class="container">
+            <div class="row section-row">
+                <div class="section-title">
+                    <h3 class="wow fadeInUp">ministries</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">Our Latest <span>Ministries</span></h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="ministries-item wow fadeInUp">
+                        <div class="ministries-image" data-cursor-text="View">
+                            <a href="#">
+                                <figure>
+                                    <img src="images/ministries-img-1.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+
+                        <div class="ministries-content">
+                            <h3>CHOIR MINISTRY</h3>
+                        </div>
+                        <div class="ministries-btn">
+                            <a href="#" class="readmore-btn"><img src="images/arrow-white.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="ministries-item wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="ministries-image" data-cursor-text="View">
+                            <a href="#">
+                                <figure>
+                                    <img src="images/ministries-img-2.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="ministries-content">
+                            <h3>EVANGELISM MINISTRY</h3>
+                        </div>
+                        <div class="ministries-btn">
+                            <a href="#" class="readmore-btn"><img src="images/arrow-white.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="ministries-item wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="ministries-image" data-cursor-text="View">
+                            <a href="#">
+                                <figure>
+                                    <img src="images/ministries-img-3.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="ministries-content">
+                            <h3>PROGRESSIVE MEN MINISTRY</h3>
+                        </div>
+                        <div class="ministries-btn">
+                            <a href="#" class="readmore-btn"><img src="images/arrow-white.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="our-ministries-footer wow fadeInUp" data-wow-delay="0.75s">
+                        <p>Explore the exciting new ways we are serving our community and growing together in faith with our latest ministry initiatives. <a href="/ourministries">View All Ministries</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="our-sermons">
+        <div class="container">
+            <div class="row section-row">
+                <div class="section-title">
+                    <h3 class="wow fadeInUp">our sermons</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">Our Latest <span>Sermons</span></h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="sermons-item wow fadeInUp">
+                        <div class="sermons-image">
+                            <figure>
+                                <a href="#" class="image-anime" data-cursor-text="View">
+                                    <img src="images/sermons-img-1.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="sermons-meta">
+                                <h3>03</h3>
+                                <p>aug</p>
+                            </div>
+                            <div class="sermons-audio-icon">
+                                <a href="#"><img src="images/audio-play-icon.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="sermons-body">
+                            <div class="sermons-title">
+                                <h2>Start a New Way of Living</h2>
+                            </div>
+                            <div class="sermons-list">
+                                <ul>
+                                    <li><i class="fa-solid fa-user"></i>Sermon From : <span>John Due</span></li>
+                                    <li><i class="fa-solid fa-tag"></i>Categories : <span>Pray</span></li>
+                                    <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span>Aug 03 - on 7:00 am - 11:00 am</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="sermons-item wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="sermons-image">
+                            <figure>
+                                <a href="#" class="image-anime" data-cursor-text="View">
+                                    <img src="images/sermons-img-2.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="sermons-meta">
+                                <h3>03</h3>
+                                <p>aug</p>
+                            </div>
+
+                            <div class="sermons-audio-icon">
+                                <a href="#"><img src="images/audio-play-icon.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="sermons-body">
+                            <div class="sermons-title">
+                                <h2>overcoming life's challenges</h2>
+                            </div>
+                            <div class="sermons-list">
+                                <ul>
+                                    <li><i class="fa-solid fa-user"></i>Sermon From : <span>John Due</span></li>
+                                    <li><i class="fa-solid fa-tag"></i>Categories : <span>Pray</span></li>
+                                    <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span>Aug 03 - on 7:00 am - 11:00 am</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="sermons-item wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="sermons-image">
+                            <figure>
+                                <a href="#" class="image-anime" data-cursor-text="View">
+                                    <img src="images/sermons-img-3.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="sermons-meta">
+                                <h3>03</h3>
+                                <p>aug</p>
+                            </div>
+
+                            <div class="sermons-audio-icon">
+                                <a href="#"><img src="images/audio-play-icon.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="sermons-body">
+                            <div class="sermons-title">
+                                <h2>hope in times of trouble</h2>
+                            </div>
+                            
+                            <div class="sermons-list">
+                                <ul>
+                                    <li><i class="fa-solid fa-user"></i>Sermon From : <span>John Due</span></li>
+                                    <li><i class="fa-solid fa-tag"></i>Categories : <span>Pray</span></li>
+                                    <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span>Aug 03 - on 7:00 am - 11:00 am</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="verse-church">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="verse-church-content">
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">verse of the day</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Life is a Church that Loves <span>God and People.</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.25s">Life is a church dedicated to loving God and serving people. We foster a welcoming community where faith and compassion drive everything we do, striving to make a positive impact both spiritually and socially. Join us in this journey.</p>
+                        </div>
+                        <div class="verse-church-btn wow fadeInUp" data-wow-delay="0.5s">
+                            <a href="#" class="btn-default">donate now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="donate-now parallaxie">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-4">
+                    <div class="intro-video-box">
+                        <!-- Video Play Button Start -->
+                        <div class="video-play-button">
+                            <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                        <!-- Video Play Button End -->
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-8">
+                    <!-- Donate Box Start -->
+                    <div class="donate-box">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">donate now</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Support <span>Our Mission</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.25s">Your generous support enables to continue its mission of spreading God's love and serving our community.</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <div class="donate-form wow fadeInUp" data-wow-delay="0.5s">
+                            <form id="donateForm" action="#" method="POST">
+                                <div class="form-group mb-4">
+                                    <input type="text" name="text" class="form-control" placeholder="donate now ..." required>
+                                </div>
+
+                                <fieldset class="donate-value-box">                                  
+                                    <div class="donate-value">
+                                        <input type="radio" id="value1" name="value" value="value1" checked>
+                                        <label for="value1">£ 100.00</label>
+                                      </div>
+                                    
+                                      <div class="donate-value">
+                                        <input type="radio" id="value2" name="value" value="value2">
+                                        <label for="value2">£ 200.00</label>
+                                      </div>
+                                    
+                                      <div class="donate-value">
+                                        <input type="radio" id="value3" name="value" value="value3">
+                                        <label for="value3">£ 300.00</label>
+                                      </div>
+                                      
+                                      <div class="donate-value">
+                                          <input type="radio" id="value4" name="value" value="value4">
+                                          <label for="value4">£ 400.00</label>
+                                      </div>
+                                      
+                                      <div class="donate-value">
+                                          <input type="radio" id="value5" name="value" value="value5">
+                                          <label for="value5">£ 500.00</label>
+                                      </div>
+                                      
+                                      <div class="donate-value">
+                                          <input type="radio" id="value6" name="value" value="value6">
+                                          <label for="value6">£ 600.00</label>
+                                      </div>
+                                </fieldset>
+
+                                <div class="form-group-btn">
+                                    <button type="submit" class="btn-default">donate now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="our-blog">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                     <div class="section-title">
+                        <h3 class="wow fadeInUp">latest post</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Read Our <span>Latest Event</span></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <!-- Blog Item Start -->
+                    <div class="blog-item wow fadeInUp">
+                        <!-- Post Featured Image Start-->
+                        <div class="post-featured-image" data-cursor-text="View">
+                            <figure>
+                                <a href="#" class="image-anime">
+                                    <img src="images/post-1.jpg" alt="">
+                                </a>
+                            </figure>
+                        </div>
+                        <!-- Post Featured Image End -->
+
+                        <!-- post Item Body Start -->
+                        <div class="post-item-body">
+                            <h2><a href="#">This Week's Sermon: Embracing Forgiveness</a></h2>
+                        </div>
+                        <!-- Post Item Body End-->
+
+                        <!-- Post Item Footer Start-->
+                        <div class="post-item-footer">
+                            <a href="#" class="read-more-btn">read more</a>
+                        </div>
+                        <!-- Post Item Footer End-->
+                    </div>
+                    <!-- Blog Item End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Blog Item Start -->
+                    <div class="blog-item wow fadeInUp" data-wow-delay="0.25s">
+                        <!-- Post Featured Image Start-->
+                        <div class="post-featured-image" data-cursor-text="View">
+                            <figure>
+                                <a href="#" class="image-anime">
+                                    <img src="images/post-2.jpg" alt="">
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="post-item-body">
+                            <h2><a href="#">Join Us for the Christmas Eve Candlelight Service</a></h2>
+                        </div>
+                        <div class="post-item-footer">
+                            <a href="#" class="read-more-btn">read more</a>
+                        </div>
+                        <!-- Post Item Footer End-->
+                    </div>
+                    <!-- Blog Item End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Blog Item Start -->
+                    <div class="blog-item wow fadeInUp" data-wow-delay="0.5s">
+                        <!-- Post Featured Image Start-->
+                        <div class="post-featured-image" data-cursor-text="View">
+                            <figure>
+                                <a href="#" class="image-anime">
+                                    <img src="images/post-3.jpg" alt="">
+                                </a>
+                            </figure>
+                        </div>
+                        <!-- Post Featured Image End -->
+
+                        <!-- post Item Body Start -->
+                        <div class="post-item-body">
+                            <h2><a href="#">New Bible Study Series Starts This Sunday</a></h2>
+                        </div>
+                        <!-- Post Item Body End-->
+
+                        <!-- Post Item Footer Start-->
+                        <div class="post-item-footer">
+                            <a href="#" class="read-more-btn">read more</a>
+                        </div>
+                        <!-- Post Item Footer End-->
+                    </div>
+                    <!-- Blog Item End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Blog End -->
+
+    <!-- Subscribe Newsletter Section Start -->
+    <div class="subscribe-newsletter parallaxie">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                     <!-- Section Title Start -->
+                     <div class="section-title">
+                        <h3 class="wow fadeInUp">subscribe newsletter</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Keep Up With Our <span>Latest News</span></h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.25s">Subscribe to our newsletter to stay informed about upcoming events, inspiring messages, and the latest news from our church community.</p>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Subscribe Newsletter Form Start -->
+                    <div class="subscribe-newsletter-form wow fadeInUp" data-wow-delay="0.5s">
+                        <form id="newslettersForm" action="#" method="POST">
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control"  id="mail" placeholder="Your Email..." required>
+                                <button type="submit" class="subscribe-btn">subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="about-footer">
+                        <div class="footer-logo">
+                            <img src="cga-main-logo.png" alt="">
+                        </div>
+
+                        <div class="about-footer-content">
+                            <p>Relentless evangelism and impartation of the Word of God, through sound teaching and effective prayers.</p>
+                        </div>
+                        <div class="footer-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>                                                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="footer-links">
+                        <h3>quick links</h3>
+                        <ul>
+                            <li><a href="/">home</a></li>
+                            <li><a href="/ministries">our Ministers</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/gallery">Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="footer-links">
+                        <h3>our services</h3>
+                        <ul>
+                            <li><a href="#">Event of the year</a></li>
+                            <li><a href="#">Event Calendar</a></li>
+                            <li><a href="#">Prayer Request</a></li>
+                            <li><a href="#">Welfare & Evangelism</a></li>
+                            <li><a href="#">Statement of Belief</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-5">
+                    <div class="footer-contact">
+                        <h3>contact</h3>
+                        <div class="footer-contact-details">
+                            <div class="footer-info-box">
+                                <div class="icon-box">
+                                    <img src="images/icon-phone.svg" alt="">
+                                </div>
+                                <div class="footer-info-box-content">
+                                    <p>+44 (0)1375844355</p>
+                                </div>                                
+                            </div>
+
+                            <div class="footer-info-box">
+                                <div class="icon-box">
+                                    <img src="images/icon-mail.svg" alt="">
+                                </div>
+                                <div class="footer-info-box-content">
+                                    <p>domain@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="footer-info-box">
+                                <div class="icon-box">
+                                    <img src="images/icon-location.svg" alt="">
+                                </div>
+                                <div class="footer-info-box-content">
+                                    <p>The Lighthouse, 164 Dock Road, Tilbury, Essex RM18 7BS</p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <div class="row align-items-center">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="footer-copyright-text text-center">
+                            <p>Copyright 2025 Christ Gospel Assembly. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </footer>
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Audio js File -->
+    <script src="js/plyr.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+	<script src="../../assets/js/theme-panel.js"></script>
+</body>
+
+<!-- Mirrored from demo.awaikenthemes.com/html-preview/avenix/index-slider.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 20:37:11 GMT -->
 </html>
