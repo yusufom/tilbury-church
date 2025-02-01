@@ -27,7 +27,17 @@ router.get("/ministries", async (req, res) => {
 
 router.get("/gallery", async (req, res) => {
     res.render("gallery.ejs");
-  });
+});
+
+router.get("/statement", async (req, res) => {
+    res.render("statement.ejs");
+});
+
+router.get("/statementbelief", async (req, res) => {
+    res.render("statementbelief.ejs");
+});
+
+
 
 
 
