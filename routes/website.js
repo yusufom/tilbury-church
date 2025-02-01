@@ -37,6 +37,10 @@ router.get("/statementbelief", async (req, res) => {
     res.render("statementbelief.ejs");
 });
 
+router.get("/ourministries", async (req, res) => {
+    res.render("ministerss.ejs");
+});
+
 
 
 
