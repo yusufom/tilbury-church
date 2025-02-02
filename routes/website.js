@@ -33,12 +33,33 @@ router.get("/statement", async (req, res) => {
     res.render("statement.ejs");
 });
 
-router.get("/statementbelief", async (req, res) => {
-    res.render("statementbelief.ejs");
+router.get("/service", async (req, res) => {
+    res.render("service.ejs");
 });
 
 router.get("/ourministries", async (req, res) => {
     res.render("ministerss.ejs");
+});
+
+router.get("/sermon", async (req, res) => {
+    res.render("sermon.ejs");
+});
+
+
+router.get("/sermonsingle", async (req, res) => {
+    res.render("sermonsingle.ejs");
+});
+
+router.get("/event", async (req, res) => {
+    res.render("event.ejs");
+});
+
+router.get("/donation", async (req, res) => {
+    res.render("donation.ejs");
+});
+
+router.get("/donationsingle", async (req, res) => {
+    res.render("donationsingle.ejs");
 });
 
 

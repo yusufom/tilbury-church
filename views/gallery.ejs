@@ -5,124 +5,104 @@
     <body>
 
         <%- include('partials/head/menubar.ejs'); %>
+
+        <div class="page-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="page-header-box">
+                            <h1 class="text-anime-style-2" data-cursor="-opaque">Our Gallery</h1>
+                            <nav class="wow fadeInUp">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Our Gallery</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <main class="fix">
-
-            <section class="page-header" data-background="assets/images/home2/hero-2-bg.png">
-                <div class="container">
-                    <div class="row">
-                        <h1 class="mb-2 text-white">Our Gallery</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Photo Gallery</li>
-                            </ol>
-                        </nav>
+        <div class="page-gallery">
+            <div class="container">
+                <!-- gallery section start -->
+                <div class="row gallery-items page-gallery-box">
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-cursor-text="View" style="visibility: visible; animation-name: fadeInUp;">
+                            <a href="images/gallery-1.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/gallery-1.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.2s" data-cursor-text="View" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                            <a href="images/gallery-2.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/gallery-2.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.4s" data-cursor-text="View" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <a href="images/gallery-3.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/gallery-3.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.6s" data-cursor-text="View" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                            <a href="images/gallery-4.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/gallery-4.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.8s" data-cursor-text="View" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+                            <a href="images/gallery-5.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/gallery-5.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="1s" data-cursor-text="View" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+                            <a href="images/gallery-6.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/gallery-6.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
                     </div>
                 </div>
-            </section>
-
-
-            <section class="section-padding">
-                <div class="container">
-                    <div class="row mb-5">
-                        <div class="col-md-12">
-                            <div class="w-lg-50">
-                                <h2 class="fw-normal mb-4">
-                                    Exploring Our Sacred Spaces A Journey Through Faith
-                                </h2>
-                            </div>
-                            <div class="d-flex flex-wrap gap-2 mb-4 filter-menu-active">
-                                <button data-filter="*" class="btn rounded-5 btn-tag-outline active">Show All</button>
-                                <button data-filter=".cat1" class="btn rounded-5 btn-tag-outline">
-                                    <span>Moments</span>
-                                </button>
-                                <button data-filter=".cat2" class="btn rounded-5 btn-tag-outline">
-                                    <span>Spaces</span>
-                                </button>
-                                <button data-filter=".cat3" class="btn rounded-5 btn-tag-outline">
-                                    <span>Gatherings</span>
-                                </button>
-                                <button data-filter=".cat4" class="btn rounded-5 btn-tag-outline">
-                                    <span>Reflections</span>
-                                </button>
-                                <button data-filter=".cat5" class="btn rounded-5 btn-tag-outline">
-                                    <span>Worship</span>
-                                </button>
-                                <button data-filter=".cat6" class="btn rounded-5 btn-tag-outline">
-                                    <span>Sanctuaries</span>
-                                </button>
-                                <button data-filter=".cat7" class="btn rounded-5 btn-tag-outline">
-                                    <span>Fellowship</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gy-60 gx-60 justify-content-between masonary-active">
-                        <div class="col-lg-6 col-md-6 col-12 filter-item mb-lg-5 mb-4 cat1 cat3 cat7">
-                            <div class="project-card-item8 shine-animate-item">
-                                <div class="project-card-thumb">
-                                    <a class="shine-animate" href="#">
-                                        <img class="w-100 rounded" src="1.jpg" alt="Blessed">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 filter-item mb-lg-5 mb-4 cat2 cat3 cat6">
-                            <div class="project-card-item8 shine-animate-item">
-                                <div class="project-card-thumb">
-                                    <a class="shine-animate" href="#">
-                                        <img class="w-100 rounded" src="2.jpg" alt="Blessed">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 filter-item mb-lg-5 mb-4 cat1 cat5 cat3">
-                            <div class="project-card-item8 shine-animate-item">
-                                <div class="project-card-thumb">
-                                    <a class="shine-animate" href="#">
-                                        <img class="w-100 rounded" src="3.jpg" alt="Blessed">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 filter-item mb-lg-5 mb-4 cat1 cat3 cat7 cat2 cat4">
-                            <div class="project-card-item8 shine-animate-item">
-                                <div class="project-card-thumb">
-                                    <a class="shine-animate" href="#">
-                                        <img class="w-100 rounded" src="4.jpg" alt="Blessed">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 filter-item mb-lg-5 mb-4 cat1 cat3 cat4 cat5">
-                            <div class="project-card-item8 shine-animate-item">
-                                <div class="project-card-thumb">
-                                    <a class="shine-animate" href="#">
-                                        <img class="w-100 rounded" src="5.jpg" alt="Blessed">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 filter-item mb-lg-5 mb-4 cat1 cat-5 cat3">
-                            <div class="project-card-item8 shine-animate-item">
-                                <div class="project-card-thumb">
-                                    <a class="shine-animate" href="#">
-                                        <img class="w-100 rounded" src="6.jpg" alt="Blessed">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-
-
-                </div>
-            </section>
-
-        </main>
-
+                <!-- gallery section end -->
+            </div>
+        </div>
         <%- include('partials/head/footer.ejs'); %>
 
     </body>
