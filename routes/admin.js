@@ -43,86 +43,23 @@ const Staff = require("../models/staff");
 var app = express.Router();
 
 app.get("/logout", authenticated, (req, res) => {
-  req.logOut();
-  res.redirect("/login");
+  req.logout((err) => {
+    if (err) {
+      console.error("Logout error:", err);
+    }
+    res.redirect("/login");
+  });
 });
 
+
+
 app.get("/", authenticated, async (req, res) => {
-  const allMessage = await Message.find({ status: "unread" });
-  const project = await Project.find().limit(4);
-  const volunteer = await Volunteer.find();
-  const picture = await PostPicture.find();
-  const partner = await Partners.find().limit(4);
-  const event = await damilare.find().limit(4);
   const user = req.user;
-
-  let theHotel;
-  let allRoom; 
-
-  if(user.accountType != "branch"){
-    theHotel = [];
-    allRoom = []
-  }
-
-  if(user.accountType == "branch"){
-    theHotel = await Post.findOne({ _id: user.office });
-    allRoom = await Room.find({hotel: theHotel._id});
-  }
-  
-
-
-  const date = new Date();
-  let day;
-  let month;
-  let days = String(date.getDate());
-  let months = String(date.getMonth());
-  const year = date.getFullYear();
-
-  if(days.length == 1){
-    day = '0' + Number(date.getDate());
-  }
-
-  if(days.length != 1){
-    day = date.getDate();
-  }
-
-  if(months.length == 1){
-    month = '0' + Number(date.getMonth() + 1);
-  }
-
-  if(months.length != 1){
-    month = Number(date.getMonth() + 1);
-  }
-  
-  let the = year + "-" + month + "-" + day;
-
-  const allBooking = await Booking.find({ });
-
-  const allJob = await JOB.find();
-  const allEmployee = await Staff.find();
-
-  const partnerall = await jobApplication.find().countDocuments();
-  const eventall = await damilare.find().countDocuments();
-  const projectall = await Resturant.find().countDocuments();
-  const volunteerall = await Volunteer.find().countDocuments();
   res.render("overview.ejs", {
-    allMessage,
-    volunteer,
-    project,
-    partner,
-    allJob,
-    allEmployee,
     user,
-    event,
-    theHotel,
-    the,
-    allRoom,
-    picture,
-    partnerall,
-    allBooking,
-    eventall,
-    projectall,
-    volunteerall,
+    eventall: 0,
+    projectall: 0,
+    volunteerall: 0,
   });
 });
 
@@ -1262,7 +1199,6 @@ app.post(
     const {
       name,
       bedType,
-      hotel,
       additionRoom,
       maxUser,
       price,
@@ -1273,7 +1209,6 @@ app.post(
     const newComment = new Room({
       name,
       bedType,
-      hotel,
       maxUser,
       additionRoom,
       price,
@@ -1284,6 +1219,7 @@ app.post(
 
     const saveComment = await newComment.save();
 
+    console.log(saveComment)
     if (saveComment) {
       httpMsgs.sendJSON(req, res, {
         from: {
@@ -1635,6 +1571,17 @@ app.get("/message", authenticated, async (req, res) => {
   });
 });
 
+
+app.get("/newsletter", authenticated, async (req, res) => {
+  const all = await Comment.find();
+  const user = req.user;
+  
+  res.render("newsletter.ejs", {
+    allMessage: all,
+    user,
+  });
+});
+
 app.get("/form", authenticated, async (req, res) => {
   const all = await Message.find({ status: "unread" });
   const allForm = await AllForm.find();
@@ -1860,7 +1807,7 @@ app.get("/gallery", authenticated, async (req, res) => {
   const gallery = await Gallery.find();
   const allMessage = await Message.find({ status: "unread" });
   const user = req.user;
-  res.render("gallery.ejs", {
+  res.render("gallery2.ejs", {
     gallery,
     allMessage,
     user,
@@ -2132,6 +2079,8 @@ var storagePost = multer.diskStorage({
   },
 });
 
+
+
 var upload8 = multer({
   storage: storagePost,
 });
@@ -2244,9 +2193,6 @@ app.post("/addHotel", authenticated, async (req, res) => {
     name,
     mapLink,
     address,
-    phone1,
-    phone2,
-    email,
     policies,
     description,
     date,
@@ -2257,9 +2203,6 @@ app.post("/addHotel", authenticated, async (req, res) => {
     mapLink,
     policies,
     address,
-    phone1,
-    phone2,
-    email,
     description,
     date,
   });

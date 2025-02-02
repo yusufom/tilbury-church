@@ -1,0 +1,136 @@
+
+<!doctype html>
+<html lang="en">
+
+<%- include('partials/heading.ejs'); %>
+
+     <body data-sidebar="dark">
+
+        <div id="layout-wrapper">
+
+            <%- include('partials/header.ejs'); %>
+
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 font-size-18">Add Sermon</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item">
+                                                <a href="javascript: void(0);">Dashboard</a></li>
+                                            <li class="breadcrumb-item active">Sermon</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                    <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex mb-1">
+                                            <h4 class="card-title mb-4">Add New Sermon</h4>
+                                            <a class="ml-auto" href="/admin/manageHotel">
+                                                <button class="ml-auto btn btn-sm" style="background: #0553A3; color: #fff">View All Sermon</button>
+                                                </a>
+                                                </div>
+                                        <div class="row">
+                            <div class="col-lg-12">
+                                
+                                       
+                                        <div>
+                                    <div>
+                                            <div id="alert-success" role="alert" class="alert alert-success text-center"></div>
+                                            <div id="alert-danger" role="alert" class="alert alert-danger text-center"></div>
+                                                    <div>
+                                                        <div class="form-group mb-4">
+                                                            <label for="input-date1">Sermon Title</label>
+                                                            <input id="hotelTitle" class="form-control input-mask" required>
+                                                            
+                                                        </div>
+
+                                                        <div class="form-group mb-4">
+                                                            <label for="input-date1">Sermon From</label>
+                                                            <input id="mapLink" class="form-control input-mask" required>
+                                                            
+                                                        </div>
+
+                                                        <div class="form-group mb-4">
+                                                            <label for="input-date1">Category </label>
+                                                            <input id="address" class="form-control input-mask" required>
+                                                            
+                                                        </div>
+
+                                                        <div class="form-group mb-4">
+                                                            <label for="input-date1">Sermon Content Paragraph 1</label>
+                                                            <textarea rows="5" id="policies" class="form-control input-mask" type="text" required></textarea>
+                                                            
+                                                        </div>
+
+                                                        <div class="form-group mb-4">
+                                                            <label for="input-date1">Sermon Content Paragraph 2</label>
+                                                            <textarea rows="5" id="description" class="form-control input-mask" type="text" required></textarea>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                
+                                        <div>
+                                            
+                                                <div class="col-lg-12 mt-3">
+                                                    <label for="formname">Select the Hotel Image :</label>
+                                                   <form method="post" action="/admin/postPicture" class="dropzone addGallery">
+                                                
+                                                <div class="fallback">
+                                                    <input name="damilare" type="file" multiple="multiple">
+                                                </div>
+                                                <div class="dz-message needsclick">
+                                                    <div class="mb-3">
+                                                        <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                    </div>
+                                                    <h4>Drop files here or click to upload.</h4>
+                                                </div>
+                                                 </form>
+
+                                                    <div class="d-flex justify-content-center mt-4">
+                                                <button type="submit" id="posts" style="background: #0553A3; color: #fff" class="btn">Add New Sermon</button>
+                                            </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <%- include('partials/footer'); %>
+            </div>
+
+        </div>
+
+        <script src="/libs/jquery/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+        <script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/libs/metismenu/metisMenu.min.js"></script>
+        <script src="/libs/simplebar/simplebar.min.js"></script>
+        <script src="/libs/node-waves/waves.min.js"></script>
+        <script src="/js2/app.js"></script>
+        <script src="/libs/summernote/summernote-bs4.min.js"></script>
+         <script src="/js2/pages/form-editor.init.js"></script>
+         <script src="/libs/dropzone/min/dropzone.min.js"></script>
+        <script src="/js2/new.js"></script>
+        <script src="/news.js"></script>
+    </body>
+
+</html>

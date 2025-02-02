@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html lang="en">
+
+<%- include('partials/heading'); %>
+
+        <body data-sidebar="dark">
+
+        <div id="layout-wrapper">
+
+            <%- include('partials/header'); %>
+
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 font-size-18">Donation</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item">
+                                                <a href="javascript: void(0);">Dashboard</a></li>
+                                            <li class="breadcrumb-item active">Donation</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                    <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex mb-1">
+                                            <h4 class="card-title mb-4">Donation</h4>
+                                            <a class="ml-auto" href="/admin/addRoom">
+                                                <button class="ml-auto btn btn-sm" style="background: #0553A3; color: #fff">Add New</button>
+                                                </a>
+                                                </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-centered table-nowrap table-hover mb-0">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>Image</th>
+                                                        <th>Name</th>
+                                                        <th>Amount (Goal)</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <% if(typeof comment != "undefined"){ %>
+                                                        <% comment.forEach(partner => { %>
+                                                            <% let logo = JSON.parse(partner.picture) %>
+                                                    <tr id="<%= partner._id %>">
+                                                        <td>
+                                                            <img style="border-radius: 25px" src="/images/comment/<%= logo.filename %>" height="35px" width="35px" alt="<%= partner.name %>">
+                                                        </td>
+                                                            <td class="text-capitalize">
+                                                            <%= partner.name %>
+                                                        </td>
+                                                        <td>
+                                                            <%= partner.bedType %>
+                                                        </td>
+                                                        
+                                                        <td>
+                                                        <span id="<%= partner._id %>" style="cursor:pointer; font-size: 12px;" class="fa fa-trash deleteRoom text-danger"></span>
+                                                        </td>
+                                                    </tr>
+                                                        <%})%>
+                                                    <% } %>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <%- include('partials/footer'); %>
+            </div>
+
+        </div>
+
+        <script src="/libs/jquery/jquery.min.js"></script>
+        <script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/libs/metismenu/metisMenu.min.js"></script>
+        <script src="/libs/simplebar/simplebar.min.js"></script>
+        <script src="/libs/node-waves/waves.min.js"></script>
+
+        <script src="/js2/app.js"></script>
+        <script src="/comment.js"></script>
+
+    </body>
+
+</html>

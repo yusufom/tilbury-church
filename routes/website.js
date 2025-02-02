@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 const Setting = require("../models/Setting");
-const Partner = require("../models/partners");
-const Volunteer = require("../models/volunteer");
+const Post = require("../models/post");
+const Room = require("../models/room");
 const Project = require("../models/project");
 const Donors = require("../models/donors");
 const Events = require("../models/realEvent");
@@ -18,7 +18,7 @@ const Comment = require("../models/comment");
 const { getIndex } = require("../controller/website/index")
 
 const { getAbout } = require("../controller/website/about")
-const { getContact, postContact } = require("../controller/website/contact")
+const { getContact, postContact } = require("../controller/website/contact");
 
 router.get("/", getIndex);
 router.get("/about", getAbout);
@@ -28,7 +28,10 @@ router.get("/ministries", async (req, res) => {
 });
 
 router.get("/gallery", async (req, res) => {
-    res.render("gallery.ejs");
+  const gallery = await Gallery.find();
+  res.render("gallery.ejs", {
+    gallery    
+  });
 });
 
 router.get("/statement", async (req, res) => {
@@ -44,12 +47,23 @@ router.get("/ourministries", async (req, res) => {
 });
 
 router.get("/sermon", async (req, res) => {
-    res.render("sermon.ejs");
+  const event = await Post.find();  
+  const PostPictures = await postPicture.find();
+    res.render("sermon.ejs", {
+      event,
+      postPicture: PostPictures
+    });
 });
 
 
-router.get("/sermonsingle", async (req, res) => {
-    res.render("sermonsingle.ejs");
+router.get("/sermonsingle/:id", async (req, res) => {
+  const id = req.params.id;
+  const News = await Post.findOne({ name: id });
+  const image = await postPicture.find();
+    res.render("sermonsingle.ejs", {
+      News,
+      image,
+    });
 });
 
 router.get("/event", async (req, res) => {
@@ -57,11 +71,18 @@ router.get("/event", async (req, res) => {
 });
 
 router.get("/donation", async (req, res) => {
-    res.render("donation.ejs");
+  const allRoom = await Room.find();
+  res.render("donation.ejs", {
+    allRoom
+  });
 });
 
-router.get("/donationsingle", async (req, res) => {
-    res.render("donationsingle.ejs");
+router.get("/donationsingle/:id", async (req, res) => {
+  const id = req.params.id;
+  const News = await Room.findOne({ name: id });
+    res.render("donationsingle.ejs", {
+      News
+    });
 });
 
 router.post("/message", async (req, res) => {

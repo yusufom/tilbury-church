@@ -13,10 +13,6 @@ const roomSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  hotel: {
-    type: String,
-    required: true,
-  },
   maxUser: {
     type: String,
     required: true,

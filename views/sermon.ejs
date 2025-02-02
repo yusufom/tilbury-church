@@ -35,167 +35,44 @@
                 </div>
     
                 <div class="row">
+
+                    <% if(typeof event != "undefined"){ %>
+                        <% event.forEach(partner => { %>
+                            <% const date = partner.eventDate; %>
+                            <% let post = postPicture.find(a => a.date == partner.date) %>
+
+                            <% let image =  JSON.parse(post.postPicture) %>
+
+                            <% const getDay = new Date(partner.eventDate) %>
                     <div class="col-lg-4 col-md-6">
                         <div class="sermons-item wow fadeInUp">
                             <div class="sermons-image">
                                 <figure>
-                                    <a href="/sermonsingle" class="image-anime" data-cursor-text="View">
-                                        <img src="images/sermons-img-1.jpg" alt="">
+                                    <a href="/sermonsingle/<%= partner.name %>" class="image-anime" data-cursor-text="View">
+                                        <img src="/images/post/<%= image.filename %>" alt="">
                                     </a>
                                 </figure>
-                                <div class="sermons-meta">
-                                    <h3>03</h3>
-                                    <p>aug</p>
-                                </div>
                                 <div class="sermons-audio-icon">
-                                    <a href="#"><img src="images/audio-play-icon.svg" alt=""></a>
                                 </div>
                             </div>
                             <div class="sermons-body">
                                 <div class="sermons-title">
-                                    <h2>Start a New Way of Living</h2>
+                                    <h2><%= partner.name %></h2>
                                 </div>
                                 <div class="sermons-list">
                                     <ul>
-                                        <li><i class="fa-solid fa-user"></i>Sermon From : <span>John Due</span></li>
-                                        <li><i class="fa-solid fa-tag"></i>Categories : <span>Pray</span></li>
-                                        <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span>Aug 03 - on 7:00 am - 11:00 am</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="sermons-item wow fadeInUp" data-wow-delay="0.25s">
-                            <div class="sermons-image">
-                                <figure>
-                                    <a href="/sermonsingle" class="image-anime" data-cursor-text="View">
-                                        <img src="images/sermons-img-2.jpg" alt="">
-                                    </a>
-                                </figure>
-                                <div class="sermons-meta">
-                                    <h3>03</h3>
-                                    <p>aug</p>
-                                </div>
-    
-                                <div class="sermons-audio-icon">
-                                    <a href="#"><img src="images/audio-play-icon.svg" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="sermons-body">
-                                <div class="sermons-title">
-                                    <h2>overcoming life's challenges</h2>
-                                </div>
-                                <div class="sermons-list">
-                                    <ul>
-                                        <li><i class="fa-solid fa-user"></i>Sermon From : <span>John Due</span></li>
-                                        <li><i class="fa-solid fa-tag"></i>Categories : <span>Pray</span></li>
-                                        <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span>Aug 03 - on 7:00 am - 11:00 am</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="sermons-item wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="sermons-image">
-                                <figure>
-                                    <a href="/sermonsingle" class="image-anime" data-cursor-text="View">
-                                        <img src="images/sermons-img-3.jpg" alt="">
-                                    </a>
-                                </figure>
-                                <div class="sermons-meta">
-                                    <h3>03</h3>
-                                    <p>aug</p>
-                                </div>
-    
-                                <div class="sermons-audio-icon">
-                                    <a href="#"><img src="images/audio-play-icon.svg" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="sermons-body">
-                                <div class="sermons-title">
-                                    <h2>hope in times of trouble</h2>
-                                </div>
-                                
-                                <div class="sermons-list">
-                                    <ul>
-                                        <li><i class="fa-solid fa-user"></i>Sermon From : <span>John Due</span></li>
-                                        <li><i class="fa-solid fa-tag"></i>Categories : <span>Pray</span></li>
-                                        <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span>Aug 03 - on 7:00 am - 11:00 am</span></li>
+                                        <li><i class="fa-solid fa-user"></i>Sermon From : <span><%= partner.mapLink %></span></li>
+                                        <li><i class="fa-solid fa-tag"></i>Categories : <span><%= partner.address %></span></li>
+                                        <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span><%= partner.date %></span></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <%})%>
+                    <% } %>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="sermons-item wow fadeInUp" data-wow-delay="0.25s">
-                            <div class="sermons-image">
-                                <figure>
-                                    <a href="/sermonsingle" class="image-anime" data-cursor-text="View">
-                                        <img src="images/sermons-img-2.jpg" alt="">
-                                    </a>
-                                </figure>
-                                <div class="sermons-meta">
-                                    <h3>03</h3>
-                                    <p>aug</p>
-                                </div>
-    
-                                <div class="sermons-audio-icon">
-                                    <a href="#"><img src="images/audio-play-icon.svg" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="sermons-body">
-                                <div class="sermons-title">
-                                    <h2>overcoming life's challenges</h2>
-                                </div>
-                                <div class="sermons-list">
-                                    <ul>
-                                        <li><i class="fa-solid fa-user"></i>Sermon From : <span>John Due</span></li>
-                                        <li><i class="fa-solid fa-tag"></i>Categories : <span>Pray</span></li>
-                                        <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span>Aug 03 - on 7:00 am - 11:00 am</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="sermons-item wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="sermons-image">
-                                <figure>
-                                    <a href="/sermonsingle" class="image-anime" data-cursor-text="View">
-                                        <img src="images/sermons-img-3.jpg" alt="">
-                                    </a>
-                                </figure>
-                                <div class="sermons-meta">
-                                    <h3>03</h3>
-                                    <p>aug</p>
-                                </div>
-    
-                                <div class="sermons-audio-icon">
-                                    <a href="#"><img src="images/audio-play-icon.svg" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="sermons-body">
-                                <div class="sermons-title">
-                                    <h2>hope in times of trouble</h2>
-                                </div>
-                                
-                                <div class="sermons-list">
-                                    <ul>
-                                        <li><i class="fa-solid fa-user"></i>Sermon From : <span>John Due</span></li>
-                                        <li><i class="fa-solid fa-tag"></i>Categories : <span>Pray</span></li>
-                                        <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span>Aug 03 - on 7:00 am - 11:00 am</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

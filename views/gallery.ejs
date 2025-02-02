@@ -26,76 +26,21 @@
         
         <div class="page-gallery">
             <div class="container">
-                <!-- gallery section start -->
                 <div class="row gallery-items page-gallery-box">
+                    <% if(typeof gallery != "undefined"){ %>
+                        <% gallery.forEach(gal => { %>
+                            <% let Image = JSON.parse(gal.picture) %>
                     <div class="col-lg-4 col-6">
-                        <!-- image gallery start -->
                         <div class="photo-gallery wow fadeInUp" data-cursor-text="View" style="visibility: visible; animation-name: fadeInUp;">
-                            <a href="1.jpg">
+                            <a href="/images/gallery/<%= Image.filename %>">
                                 <figure class="image-anime">
-                                    <img src="1.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- image gallery end -->
-                    </div>
-    
-                    <div class="col-lg-4 col-6">
-                        <!-- image gallery start -->
-                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.2s" data-cursor-text="View" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                            <a href="2.jpg">
-                                <figure class="image-anime">
-                                    <img src="2.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- image gallery end -->
-                    </div>
-    
-                    <div class="col-lg-4 col-6">
-                        <!-- image gallery start -->
-                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.4s" data-cursor-text="View" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                            <a href="3.jpg">
-                                <figure class="image-anime">
-                                    <img src="3.jpg" alt="">
+                                    <img src="/images/gallery/<%= Image.filename %>" alt="">
                                 </figure>
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-6">
-                        <!-- image gallery start -->
-                        <div class="photo-gallery wow fadeInUp" data-cursor-text="View" style="visibility: visible; animation-name: fadeInUp;">
-                            <a href="4.jpg">
-                                <figure class="image-anime">
-                                    <img src="4.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- image gallery end -->
-                    </div>
-    
-                    <div class="col-lg-4 col-6">
-                        <!-- image gallery start -->
-                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.2s" data-cursor-text="View" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                            <a href="5.jpg">
-                                <figure class="image-anime">
-                                    <img src="5.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- image gallery end -->
-                    </div>
-    
-                    <div class="col-lg-4 col-6">
-                        <!-- image gallery start -->
-                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.4s" data-cursor-text="View" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                            <a href="6.jpg">
-                                <figure class="image-anime">
-                                    <img src="6.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                    </div>
+                    <% }) %>
+                    <%}%>
                 </div>
             </div>
         </div>

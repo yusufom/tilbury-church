@@ -1,0 +1,116 @@
+<div id="layout-wrapper">
+  <header id="page-topbar">
+    <div class="navbar-header">
+      <div class="d-flex">
+        <div class="navbar-brand-box" style="background: #1976D3">
+          <a href="/" class="logo logo-light">
+            <span class="logo-sm">
+              <img src="../cga-main-logo.png" alt="" height="15" />
+            </span>
+            <div style="border-radius: 10px" class=" mt-4 pb-2">
+
+              <span class="logo-lg">
+                <img class="pt-4" src="../cga-main-logo.png" alt="" height="60" />
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <button type="button" class="btn btn-sm px-3 mt-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+          <i class="fa fa-fw fa-bars"></i>
+        </button>
+        <form class="app-search d-none d-lg-block">
+          <p style="font-size: 16px" class="pt-2 pl-2 mt-3 text-secondary">
+            Welcome Super Admin !!!!
+          </p>
+        </form>
+      </div>
+
+      <div class="d-flex">
+        <div class="dropdown d-inline-block">
+          <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="d-none d-xl-inline-block ml-1"></span>
+          </button>
+        </div>
+        <div class="dropdown d-inline-block">
+          <button type="button" class="btn header-item noti-icon right-bar-toggle">
+            <a href="/admin/logout">
+              <i class="text-danger bx bx-log-in"></i>
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="vertical-menu" style="background: #1976D3">
+    <div data-simplebar class="h-100">
+      <div id="sidebar-menu" class="mt-4">
+        <ul class="metismenu list-unstyled" id="side-menu">
+          <li class="text-white menu-title">Menu</li>
+          <li class="mt-1">
+            <a href="/admin" class="text-white waves-effect">
+              <i class="text-white bx bx-home-circle"></i>
+              <span>Overview</span>
+            </a>
+          </li>
+          <% if(user.accountType !="branch" && user.accountType !="employee" && user.accountType !="human resource" &&
+            user.accountType !="applicant" && user.accountType !="customer service" ){ %>
+            <li class="mt-1">
+              <a href="javascript: void(0);" class="text-white has-arrow waves-effect">
+                <i class="text-white bx bx-building"></i>
+                <span>Sermon</span>
+              </a>
+              <ul class="sub-menu" aria-expanded="false">
+                <li><a class="text-white" href="/admin/create">Add Sermon</a></li>
+                <li>
+                  <a class="text-white" href="/admin/manageHotel">Manage Sermon</a>
+                </li>
+              </ul>
+            </li>
+            <% } %>
+              
+                              
+                                <li class="mt-1">
+                                  <a href="/admin/message" class="waves-effect text-white">
+                                    <i class="text-white bx bx-envelope"></i>
+                                    <span>Message</span>
+                                  </a>
+                                </li>
+
+                                <li class="mt-1">
+                                  <a href="/admin/newsletter" class="waves-effect text-white">
+                                    <i class="text-white bx bx-envelope"></i>
+                                    <span>Newsletter</span>
+                                  </a>
+                                </li>
+                                
+                                        <li class="mt-1">
+                                          <a href="javascript: void(0);" class="text-white has-arrow waves-effect">
+                                            <i class="text-white bx bx-user"></i>
+                                            <span>Donation</span>
+                                          </a>
+                                          <ul class="sub-menu" aria-expanded="false">
+                                            <li><a class="text-white" href="/admin/addRoom">Add Donation</a></li>
+                                            <li><a class="text-white" href="/admin/manageRoom">Manage Donation</a></li>
+                                          </ul>
+                                        </li>
+                                        <li class="mt-1">
+                                          <a href="javascript: void(0);" class="text-white has-arrow waves-effect">
+                                            <i class="text-white bx bx-comment"></i>
+                                            <span>Gallery</span>
+                                          </a>
+                                          <ul class="sub-menu" aria-expanded="false">
+                                            <li>
+                                              <a class="text-white" href="/admin/addGallery">Add Image</a>
+                                            </li>
+                                            <li>
+                                              <a class="text-white" href="/admin/gallery">Manage Gallery</a>
+                                            </li>
+                                          </ul>
+                                        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
