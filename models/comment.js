@@ -1,20 +1,12 @@
 const mongoose = require("mongoose");
 
 const commentSchema = mongoose.Schema({
-  name: {
+  email: {
     type: String,
     required: true
   },
-  picture: {
-    type: String,
-    required: true
-  },
-  occupation: {
-    type: String,
-    required: true
-  },
-  comment: {
-    type: String,
+  date: {
+    type: Date,
     required: true
   }
 });

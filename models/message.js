@@ -1,19 +1,19 @@
 const mongoose = require("mongoose");
 
 const messageSchema = mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  title: {
-    type: String,
-    required: true,
-  },
   email: {
     type: String,
     required: true,
   },
-  message: {
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  phoneNumber: {
     type: String,
     required: true,
   },
@@ -21,17 +21,10 @@ const messageSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  status: {
+  message: {
     type: String,
     required: true,
-  },
-  phone: {
-    type: String,
-    required: true,
-  },
-  hotel: {
-    type: String,
-  },
+  }
 });
 
 const messages = mongoose.model("message", messageSchema);

@@ -1,24 +1,24 @@
-// const mongoose = require("mongoose");
-// const debug = require("debug")("app:DB");
+const mongoose = require("mongoose");
+const debug = require("debug")("app:DB");
 
-// let MongoURI;
+let MongoURI;
 
-// module.exports = app => {
+module.exports = app => {
   
-//   MongoURI = process.env.DB_String;
+  MongoURI = process.env.DB_String;
 
-//   mongoose.connect(MongoURI, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-//   });
+  mongoose.connect(MongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  });
 
-//   let db = mongoose.connection;
+  let db = mongoose.connection;
 
-//   db.on("open", () => {
-//     debug("MongoDb Connected Successfully");
-//   });
+  db.on("open", () => {
+    debug("MongoDb Connected Successfully");
+  });
 
-//   db.on("error", () => {
-//     debug("MongoDb Connection Error");
-//   });
-// };
+  db.on("error", () => {
+    debug("MongoDb Connection Error");
+  });
+};

@@ -3,6 +3,7 @@
     <%- include('partials/head/header.ejs'); %>
 <body>
     <%- include('partials/head/menubar.ejs'); %>
+    
 	<div class="hero hero-slider">
         <div class="hero-slider-layout">
             <div class="swiper">
@@ -24,7 +25,7 @@
                     
                                             <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
                                                 <a target="_blank" href="https://maps.app.goo.gl/5eV6vbFuDJ5TmA1q8" class="btn-default"><span>join in person</span></a>
-                                                <a href="/donation" class="btn-default btn-highlighted"><span>donate now</span></a>
+                                                <a href="/about" class="btn-default btn-highlighted"><span>About Us</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -54,7 +55,7 @@
                                             </div>
                                             <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
                                                 <a href="https://maps.app.goo.gl/5eV6vbFuDJ5TmA1q8" class="btn-default"><span>join in person</span></a>
-                                                <a href="/donation" class="btn-default btn-highlighted"><span>donate now</span></a>
+                                                <a href="/about" class="btn-default btn-highlighted"><span>About Us</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -82,7 +83,7 @@
                                             </div>
                                             <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
                                                 <a href="https://maps.app.goo.gl/5eV6vbFuDJ5TmA1q8" class="btn-default"><span>join in person</span></a>
-                                                <a href="/donation" class="btn-default btn-highlighted"><span>donate now</span></a>
+                                                <a href="/about" class="btn-default btn-highlighted"><span>About Us</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -536,44 +537,41 @@
                         </div>
                         <div class="donate-form wow fadeInUp" data-wow-delay="0.5s">
                             <form id="donateForm" action="#" method="POST">
-                                <div class="form-group mb-4">
-                                    <input type="text" name="text" class="form-control" placeholder="donate now ..." required>
-                                </div>
 
                                 <fieldset class="donate-value-box">                                  
                                     <div class="donate-value">
                                         <input type="radio" id="value1" name="value" value="value1" checked>
-                                        <label for="value1">£ 100.00</label>
+                                        <label for="value1">£ 10.00</label>
                                       </div>
                                     
                                       <div class="donate-value">
                                         <input type="radio" id="value2" name="value" value="value2">
-                                        <label for="value2">£ 200.00</label>
+                                        <label for="value2">£ 20.00</label>
                                       </div>
                                     
                                       <div class="donate-value">
                                         <input type="radio" id="value3" name="value" value="value3">
-                                        <label for="value3">£ 300.00</label>
+                                        <label for="value3">£ 30.00</label>
                                       </div>
                                       
                                       <div class="donate-value">
                                           <input type="radio" id="value4" name="value" value="value4">
-                                          <label for="value4">£ 400.00</label>
+                                          <label for="value4">£ 40.00</label>
                                       </div>
                                       
                                       <div class="donate-value">
                                           <input type="radio" id="value5" name="value" value="value5">
-                                          <label for="value5">£ 500.00</label>
+                                          <label for="value5">£ 50.00</label>
                                       </div>
                                       
                                       <div class="donate-value">
                                           <input type="radio" id="value6" name="value" value="value6">
-                                          <label for="value6">£ 600.00</label>
+                                          <label for="value6">and</label>
                                       </div>
                                 </fieldset>
 
                                 <div class="form-group-btn">
-                                    <button type="submit" class="btn-default">donate now</button>
+                                    <a href="/donation" type="submit" class="btn-default">donate now</a>
                                 </div>
                             </form>
                         </div>
@@ -710,7 +708,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="subscribe-newsletter-form wow fadeInUp" data-wow-delay="0.5s">
-                        <form id="newslettersForm" action="#" method="POST">
+                        <form id="newNews" action="#" method="POST">
                             <div class="form-group">
                                 <input type="email" name="email" class="form-control"  id="mail" placeholder="Your Email..." required>
                                 <button type="submit" class="subscribe-btn">subscribe</button>
@@ -724,6 +722,43 @@
     
     
     <%- include('partials/head/footer.ejs'); %>
+
+    <script>
+
+        const formAddition = document.querySelector('#newNews');
+    
+        formAddition.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.querySelector('#mail').value;
+    
+            const payload = { email };
+            
+            $.ajax({
+                data: payload,
+                url: `/message`,
+                method: "POST",
+                contentType: "application/x-www-form-urlencoded",
+                success: function (response) {
+                    if (response) {
+                        const comming = response.from;
+                        $("#mail").val("");
+                        if (comming.status == "200") {
+                            toastr.success(`${comming.comment}`);
+                        }else {
+                            toastr.error(`${comming.comment}`)
+                        }
+                    }
+                },
+            });
+            return false;
+    
+    
+    
+    
+        })
+    
+        
+    </script>
 </body>
 
 </html>

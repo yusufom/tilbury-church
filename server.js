@@ -4,7 +4,7 @@ require("dotenv").config();
 
 const debug = require("debug")("app:startup");
 
-// require("./startup/database")(app);
+require("./startup/database")(app);
 
 PORT = process.env.PORT || 3000;
 
