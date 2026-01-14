@@ -12,3 +12,5 @@ PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   debug(`App now listening @ PORT ${PORT}`);
 });
+
+module.exports = app;

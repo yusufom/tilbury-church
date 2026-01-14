@@ -8,8 +8,7 @@ module.exports = app => {
   MongoURI = process.env.DB_String;
 
   mongoose.connect(MongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+    
   });
 
   let db = mongoose.connection;
