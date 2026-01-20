@@ -9,6 +9,7 @@ const Donors = require("../models/donors");
 const Events = require("../models/realEvent");
 const postPicture = require("../models/postPicture");
 const Gallery = require("../models/gallery");
+const Category = require("../models/category");
 const Blog = require("../models/post");
 const Message = require("../models/message");
 const httpMsgs = require("http-msgs");
@@ -28,10 +29,32 @@ router.get("/ministries", async (req, res) => {
 });
 
 router.get("/gallery", async (req, res) => {
-  const gallery = await Gallery.find();
-  res.render("gallery.ejs", {
-    gallery    
-  });
+  try {
+    const categorySlug = req.query.category;
+    let query = {};
+    
+    // Get all categories for the filter buttons
+    const categories = await Category.find().sort({ name: 1 });
+    
+    // If a category is selected, filter by it
+    if (categorySlug && categorySlug !== 'all') {
+      const category = await Category.findOne({ slug: categorySlug });
+      if (category) {
+        query.category = category._id;
+      }
+    }
+    
+    const gallery = await Gallery.find(query).populate('category');
+    
+    res.render("gallery.ejs", {
+      gallery,
+      categories,
+      activeCategory: categorySlug || 'all'
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error loading gallery");
+  }
 });
 
 router.get("/statement", async (req, res) => {

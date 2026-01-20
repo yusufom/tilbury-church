@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/heading.ejs'); %>
+
+    <body data-sidebar="dark">
+
+        <div id="layout-wrapper">
+            <%- include('partials/header.ejs'); %>
+
+
+
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="container-fluid">
+
+                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 font-size-18">Add New Category</h4>
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item">
+                                            <a href="javascript: void(0);">Dashboard</a>
+                                        </li>
+                                        <li class="breadcrumb-item active">Add New Category</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <!-- Add Category Form -->
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5>Add New Category</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form action="/admin/categories/add" method="POST">
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Category Name</label>
+                                            <input type="text" class="form-control" id="name" name="name" required
+                                                placeholder="e.g., Outreach, Events">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Add Category</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Categories List -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Existing Categories</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Slug</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% if(categories.length> 0) { %>
+                                                <% categories.forEach(cat=> { %>
+                                                    <tr>
+                                                        <td>
+                                                            <%= cat.name %>
+                                                        </td>
+                                                        <td>
+                                                            <%= cat.slug %>
+                                                        </td>
+                                                        <td>
+                                                            <form action="/admin/categories/delete/<%= cat._id %>"
+                                                                method="POST" style="display: inline;">
+                                                                <button type="submit" class="btn btn-danger btn-sm"
+                                                                    onclick="return confirm('Are you sure?')">Delete</button>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    <% }) %>
+                                                        <% } else { %>
+                                                            <tr>
+                                                                <td colspan="3" class="text-center">No categories yet
+                                                                </td>
+                                                            </tr>
+                                                            <% } %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+        </div>
+
+    </body>
+
+</html>

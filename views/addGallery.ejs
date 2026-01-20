@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="en">
 
 <%- include('partials/heading.ejs'); %>
@@ -8,99 +8,139 @@
         <div id="layout-wrapper">
 
             <%- include('partials/header.ejs'); %>
-            <div class="main-content">
-                <div class="page-content">
-                    <div class="container-fluid">
-                        <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Add New Image</h4>
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item">
-                                                <a href="javascript: void(0);">Dashboard</a></li>
-                                            <li class="breadcrumb-item active">Add New Image</li>
-                                        </ol>
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="container-fluid">
+                            <!-- start page title -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                                        <h4 class="mb-0 font-size-18">Add New Image</h4>
+                                        <div class="page-title-right">
+                                            <ol class="breadcrumb m-0">
+                                                <li class="breadcrumb-item">
+                                                    <a href="javascript: void(0);">Dashboard</a>
+                                                </li>
+                                                <li class="breadcrumb-item active">Add New Image</li>
+                                            </ol>
+                                        </div>
                                     </div>
-                                </div>
                                     <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex mb-1">
-                                            <h4 class="card-title mb-4">Add New Image</h4>
-                                            <a class="ml-auto" href="/admin/gallery">
-                                                <button class="ml-auto btn btn-sm" style="background: tomato; color: #fff">view all Images Collection</button>
-                                                </a>
-                                                </div>
-                                        <div class="row">
-                            <div class="col-lg-12">
-                                
-                                       
-                                        <div class="card">
-                                    <div class="card-body">
-                                        <form action="/admin/addGallery" method="post" enctype="multipart/form-data">
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div>
-                                                        <div class="form-group mb-4">
-                                                            <label for="input-date1">Description</label>
-                                                            <input name="description" id="input-date1" class="form-control input-mask" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy">
-                                                            
+                                        <div class="col-lg-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex mb-1">
+                                                        <h4 class="card-title mb-4">Add New Image</h4>
+                                                        <a class="ml-auto" href="/admin/gallery">
+                                                            <button class="ml-auto btn btn-sm"
+                                                                style="background: tomato; color: #fff">view all Images
+                                                                Collection</button>
+                                                        </a>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+
+
+                                                            <div class="card">
+                                                                <div class="card-body">
+                                                                    <form action="/admin/addGallery" method="post"
+                                                                        enctype="multipart/form-data">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-12">
+                                                                                <div>
+                                                                                    <div class="form-group mb-4">
+                                                                                        <label
+                                                                                            for="input-date1">Description</label>
+                                                                                        <input name="description"
+                                                                                            id="input-date1"
+                                                                                            class="form-control input-mask"
+                                                                                            data-inputmask="'alias': 'datetime'"
+                                                                                            data-inputmask-inputformat="dd/mm/yyyy">
+
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-12">
+                                                                                <div>
+                                                                                    <div class="form-group mb-4">
+                                                                                        <label for="category"
+                                                                                            class="form-label">Category</label>
+                                                                                        <select class="form-control"
+                                                                                            id="category"
+                                                                                            name="category" required>
+                                                                                            <option value="">Select
+                                                                                                Category</option>
+                                                                                            <% categories.forEach(cat=>
+                                                                                                { %>
+                                                                                                <option
+                                                                                                    value="<%= cat._id %>">
+                                                                                                    <%= cat.name %>
+                                                                                                </option>
+                                                                                                <% }) %>
+                                                                                        </select>
+
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-12 mt-3">
+                                                                                <label for="formname">Select the Images
+                                                                                    :</label>
+
+                                                                                <input class="form-control" id="logo"
+                                                                                    name="picture" type="file" required>
+
+
+                                                                            </div>
+                                                                            <div
+                                                                                class="d-flex justify-content-center mt-4">
+                                                                                <button type="submit"
+                                                                                    style="background: tomato; color: #fff"
+                                                                                    class="btn">Add New Images</button>
+                                                                            </div>
+                                                                        </div>
+                                                                </div>
+                                                                </form>
+                                                            </div>
                                                         </div>
-                                                        
-                                                        
                                                     </div>
                                                 </div>
-                                                
-                                                <div class="col-lg-12 mt-3">
-                                                    <label for="formname">Select the Images :</label>
-                                                    
-                                                            <input class="form-control" id="logo" name="picture" type="file" required>
-                                                        
-                                                        
-                                                    </div>
-                                                    <div class="d-flex justify-content-center mt-4">
-                                                <button type="submit" style="background: tomato; color: #fff" class="btn">Add New Images</button>
                                             </div>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        </div>
                                     </div>
-                                </div>
-                        </div>
-                        </div>
                                 </div>
                             </div>
+
+                            <%- include('partials/footer.ejs'); %>
                         </div>
                     </div>
-                </div>
-                
-                <%- include('partials/footer.ejs'); %>
-            </div>
-        </div>
-        <script src="/libs/jquery/jquery.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
-        <script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="/libs/metismenu/metisMenu.min.js"></script>
-        <script src="/libs/simplebar/simplebar.min.js"></script>
-        <script src="/libs/node-waves/waves.min.js"></script>
-        <script src="/js2/app.js"></script>
-         <script src="/libs/dropzone/min/dropzone.min.js"></script>
-        <script src="/js2/new.js"></script>
-  <script>
-  Dropzone.options.meuDropZone = {
-    maxFiles: 1,
-  accept: function(file, done) {
-    done();
-  },
-  maxfilesexceeded: function(file) {
-        this.removeAllFiles();
-        this.addFile(file);
-    }
-};
-  </script>
+                    <script src="/libs/jquery/jquery.min.js"></script>
+                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+                    <script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+                    <script src="/libs/metismenu/metisMenu.min.js"></script>
+                    <script src="/libs/simplebar/simplebar.min.js"></script>
+                    <script src="/libs/node-waves/waves.min.js"></script>
+                    <script src="/js2/app.js"></script>
+                    <script src="/libs/dropzone/min/dropzone.min.js"></script>
+                    <script src="/js2/new.js"></script>
+                    <script>
+                        Dropzone.options.meuDropZone = {
+                            maxFiles: 1,
+                            accept: function (file, done) {
+                                done();
+                            },
+                            maxfilesexceeded: function (file) {
+                                this.removeAllFiles();
+                                this.addFile(file);
+                            }
+                        };
+                    </script>
     </body>
+
 </html>

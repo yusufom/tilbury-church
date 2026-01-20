@@ -24,6 +24,7 @@ const jobApplication = require("../models/jobApplication");
 const Leave = require("../models/leave");
 const JOB = require("../models/job");
 const TheBooking = require("../models/books");
+const Category = require("../models/category");
 
 const BookingResult = require("../models/bookingresult");
 
@@ -258,31 +259,25 @@ app.post(
   async function (req, res, next) {
     const { title } = req.body;
     const theDate = new Date();
-    const date = `${
-      Number(theDate.getDay()) < 10 ? `0${theDate.getDay()}` : theDate.getDay()
-    }-${
-      Number(theDate.getMonth() + 1) < 10
+    const date = `${Number(theDate.getDay()) < 10 ? `0${theDate.getDay()}` : theDate.getDay()
+      }-${Number(theDate.getMonth() + 1) < 10
         ? `0${theDate.getMonth() + 1}`
         : theDate.getMonth() + 1
-    }-${
-      Number(theDate.getFullYear()) < 10
+      }-${Number(theDate.getFullYear()) < 10
         ? `0${theDate.getFullYear()}`
         : theDate.getFullYear()
-    }`;
+      }`;
 
-    const time = `${
-      Number(theDate.getHours()) < 10
-        ? `0${theDate.getHours()}`
-        : theDate.getHours()
-    }:${
-      Number(theDate.getMinutes()) < 10
+    const time = `${Number(theDate.getHours()) < 10
+      ? `0${theDate.getHours()}`
+      : theDate.getHours()
+      }:${Number(theDate.getMinutes()) < 10
         ? `0${theDate.getMinutes()}`
         : theDate.getMinutes()
-    }:${
-      Number(theDate.getSeconds()) < 10
+      }:${Number(theDate.getSeconds()) < 10
         ? `0${theDate.getSeconds()}`
         : theDate.getSeconds()
-    }`;
+      }`;
     const newPartners = new Partners({
       name: title,
       logo: JSON.stringify(req.file),
@@ -638,7 +633,7 @@ app.get("/user", authenticated, async (req, res) => {
   res.render("user.ejs", {
     comment,
     allMessage,
-    user, 
+    user,
     totalStaff: totalStaff
   });
 });
@@ -732,27 +727,27 @@ app.get("/restaurant", authenticated, async (req, res) => {
 
   let hotel;
 
-  if(user.accountType != "branch"){
+  if (user.accountType != "branch") {
     hotel = {};
   }
 
-  if(user.accountType == "branch"){
+  if (user.accountType == "branch") {
     hotel = await Post.findOne({ _id: user.office });
   }
-  
+
   const allMessage = await Message.find({ status: "unread" });
 
   let allBooking;
 
-  if(user.accountType != "branch"){
+  if (user.accountType != "branch") {
     allBooking = await BookRestaurant.find();
   }
 
-  if(user.accountType == "branch"){
+  if (user.accountType == "branch") {
     allBooking = await BookRestaurant.find({ hotel: hotel._id });
   }
 
-  
+
 
   res.render("resturantbooking.ejs", {
     user,
@@ -1000,7 +995,7 @@ app.post("/searchBooking", authenticated, async (req, res) => {
 
   const allBooking = await TheBooking.find({ checkIn: newate });
 
-  const allRoom = await Room.find({hotel: theHotel._id});
+  const allRoom = await Room.find({ hotel: theHotel._id });
 
   res.render("manage.ejs", {
     allMessage,
@@ -1575,7 +1570,7 @@ app.get("/message", authenticated, async (req, res) => {
 app.get("/newsletter", authenticated, async (req, res) => {
   const all = await Comment.find();
   const user = req.user;
-  
+
   res.render("newsletter.ejs", {
     allMessage: all,
     user,
@@ -1816,12 +1811,14 @@ app.get("/gallery", authenticated, async (req, res) => {
 
 app.get("/addGallery", authenticated, async (req, res) => {
   const gallery = await Gallery.find();
+  const categories = await Category.find().sort({ name: 1 });
   const allMessage = await Message.find({ status: "unread" });
   const user = req.user;
   res.render("addGallery.ejs", {
     gallery,
     allMessage,
     user,
+    categories
   });
 });
 
@@ -1846,11 +1843,12 @@ app.post(
   authenticated,
   uploadGallery.single("picture"),
   async (req, res) => {
-    const { description, picture } = req.body;
+    const { description, picture, category } = req.body;
     const newGallery = new Gallery({
       description,
       picture: JSON.stringify(req.file),
       date: new Date(),
+      category
     });
 
     const saveGallery = await newGallery.save();
@@ -2477,6 +2475,38 @@ app.post("/editEvent/:id", authenticated, async (req, res) => {
         status: "500",
       },
     });
+  }
+});
+
+app.get("/categories", authenticated, async (req, res) => {
+  const user = req.user;
+  const allMessage = await Message.find({ status: "unread" });
+  const categories = await Category.find().sort({ name: 1 });
+  res.render("categories.ejs", { categories, allMessage, user });
+});
+
+app.post("/categories/add", async (req, res) => {
+  try {
+    const { name } = req.body;
+    const slug = name.toLowerCase().replace(/\s+/g, '-');
+
+    const category = new Category({ name, slug });
+    await category.save();
+
+    res.redirect("/admin/categories");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error adding category");
+  }
+});
+
+app.post("/categories/delete/:id", async (req, res) => {
+  try {
+    await Category.findByIdAndDelete(req.params.id);
+    res.redirect("/admin/categories");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error deleting category");
   }
 });
 
