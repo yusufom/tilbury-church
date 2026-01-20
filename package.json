@@ -2,13 +2,12 @@
   "name": "presken-new-website",
   "version": "1.0.0",
   "description": "New presken website",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "DEBUG=app:startup node server.js",
-    "test": "nodemon server.js "
-  },
-  "engines": {
-    "node": ">=22.0.0"
+    "start": "DEBUG=app:startup node index.js",
+    "dev": "node index.js -p $PORT",
+    "test": "nodemon index.js ",
+    "build": "node build --output public"
   },
   "author": "cybercode2000",
   "license": "ISC",
@@ -29,6 +28,7 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.16",
+    "nodemon": "^3.1.11",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "twilio": "^5.3.7"

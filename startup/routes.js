@@ -1,4 +1,4 @@
-const app = require("../server");
+const app = require("..");
 const user = require("../routes/user");
 const admin = require("../routes/admin");
 const website = require('../routes/website');

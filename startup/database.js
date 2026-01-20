@@ -3,7 +3,7 @@ const debug = require("debug")("app:DB");
 
 let MongoURI;
 
-module.exports = app => {
+module.exports = (app) => {
   
   MongoURI = process.env.DB_String;
 
