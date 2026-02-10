@@ -27,10 +27,12 @@ app.use(async (req, res, next) => {
 
 require("./startup/routes.js")(app);
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.render("error404");
 });
 app.use(compression());
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: false, // or configure it properly
+}));
 
 module.exports = app;
