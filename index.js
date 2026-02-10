@@ -1,16 +1,9 @@
-const app = require("./app");
-
 require("dotenv").config();
 
-// const debug = require("debug")("app:startup");
+const app = require("./app");
 
+// Initialize database connection (uses process.env.DB_String)
 require("./startup/database")(app);
 
-const PORT = process.env.PORT || 3000;
-
-
-// app.listen(PORT, () => {
-//   debug(`App now listening @ PORT ${PORT}`);
-// });
-
-// module.exports = app;
+// Export the Express app for Vercel's Node serverless runtime
+module.exports = app;

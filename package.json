@@ -6,8 +6,7 @@
   "scripts": {
     "start": "DEBUG=app:startup node index.js",
     "dev": "node index.js -p $PORT",
-    "test": "nodemon index.js ",
-    "build": "node build --output public"
+    "test": "nodemon index.js "
   },
   "author": "cybercode2000",
   "license": "ISC",
