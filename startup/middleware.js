@@ -4,6 +4,8 @@ const passport = require("passport");
 const flash = require("express-flash");
 const cookieSession = require('cookie-session');
 const cors = require('cors');
+const path = require('path');
+
 
 
 module.exports = app => {
