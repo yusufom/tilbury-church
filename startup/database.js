@@ -19,7 +19,7 @@ async function connectOnce() {
       return;
     }
 
-    mongoose.connect(MongoURI, {
+    await mongoose.connect(MongoURI, {
       serverSelectionTimeoutMS: 5000,
       socketTimeoutMS: 45000,
     }).then(() => console.log('✅ Connected to MongoDB'))
