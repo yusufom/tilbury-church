@@ -2,6 +2,10 @@
   "version": 2,
   "builds": [
     {
+      "src": "public/**",
+      "use": "@vercel/static"
+    },
+    {
       "src": "index.js",
       "use": "@vercel/node",
       "config": {
@@ -20,8 +24,15 @@
       "dest": "/public/js/$1"
     },
     {
-      "src": "/images/(.*)",
-      "dest": "/public/images/$1"
+      "src": "/pic/(.*)",
+      "dest": "/public/pic/$1"
+    },
+    {
+      "src": "/cga/(.*)",
+      "dest": "/public/cga/$1"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
