@@ -6,7 +6,9 @@
   "scripts": {
     "start": "DEBUG=app:startup node index.js",
     "dev": "node index.js -p $PORT",
-    "test": "nodemon index.js "
+    "test": "nodemon index.js ",
+    "vercel-build": "npm install",
+    "vercel-build:production": "npm install --production"
   },
   "author": "cybercode2000",
   "license": "ISC",
