@@ -6,7 +6,7 @@
       "use": "@vercel/node",
       "config": {
         "maxDuration": 10,
-        "includeFiles": ["public/**", "views/**"]
+        "includeFiles": ["public/**", "views/**", "public/css/**", "public/js/**", "public/images/**"]
       }
     }
   ],
