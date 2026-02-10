@@ -3,9 +3,21 @@ const app = express();
 const compression = require("compression");
 const helmet = require("helmet");
 
+const ensureDbConnected = require("./startup/database");
 
 require("./startup/middleware")(app);
 require("./startup/condition")(app);
+
+// Fail fast on DB connectivity issues in serverless environments
+app.use(async (req, res, next) => {
+  try {
+    await ensureDbConnected();
+    next();
+  } catch (err) {
+    res.status(503).send("Database connection unavailable");
+  }
+});
+
 require("./startup/routes.js")(app);
 
 app.use(function(req, res, next) {

@@ -1,9 +1,12 @@
 const mongoose = require("mongoose");
 const debug = require("debug")("app:DB");
 
-let isConnected = false;
+mongoose.set("bufferCommands", false);
 
-module.exports = async () => {
+let isConnected = false;
+let connectPromise = null;
+
+async function connectOnce() {
   try {
     if (isConnected) {
       return;
@@ -24,5 +27,19 @@ module.exports = async () => {
     debug("MongoDb Connected Successfully");
   } catch (err) {
     debug("MongoDb Connection Error", err.message);
+    // Re-throw so callers can fail fast (and we can retry next time)
+    throw err;
   }
-};
+}
+
+async function ensureDbConnected() {
+  if (isConnected) return;
+  if (!connectPromise) {
+    connectPromise = connectOnce().finally(() => {
+      connectPromise = null;
+    });
+  }
+  await connectPromise;
+}
+
+module.exports = ensureDbConnected;
