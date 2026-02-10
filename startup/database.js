@@ -19,9 +19,11 @@ async function connectOnce() {
       return;
     }
 
-    await mongoose.connect(MongoURI, {
+    mongoose.connect(MongoURI, {
       serverSelectionTimeoutMS: 5000,
-    });
+      socketTimeoutMS: 45000,
+    }).then(() => console.log('✅ Connected to MongoDB'))
+      .catch(err => console.error('❌ MongoDB connection error:', err.message));
 
     isConnected = true;
     debug("MongoDb Connected Successfully");
