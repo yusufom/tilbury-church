@@ -2,8 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const flash = require("express-flash");
-const session = require("express-session");
-  const cors = require('cors');
+const cookieSession = require('cookie-session');
+const cors = require('cors');
 
 
 module.exports = app => {
@@ -14,7 +14,7 @@ module.exports = app => {
   app.use(express.static("public/"));
   require("../auth/passport")(passport);
 
-    app.use(function (req, res, next) {
+  app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
@@ -31,15 +31,16 @@ module.exports = app => {
 
     // Pass to next layer of middleware
     next();
-});
+  });
 
-  app.use(
-    session({
-      secret: "secret",
-      resave: true,
-      saveUninitialized: true
-    })
-  );
+  app.use(cookieSession({
+    name: 'session',
+    keys: [process.env.SESSION_SECRET || 'fallback-secret-key'],
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    secure: process.env.NODE_ENV === 'production',
+    httpOnly: true,
+    sameSite: 'lax'
+  }));
   app.use(cors())
   app.use(passport.initialize());
   app.use(passport.session());
