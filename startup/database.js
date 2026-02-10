@@ -1,23 +1,28 @@
 const mongoose = require("mongoose");
 const debug = require("debug")("app:DB");
 
-let MongoURI;
+let isConnected = false;
 
-module.exports = (app) => {
-  
-  MongoURI = process.env.DB_String;
+module.exports = async () => {
+  try {
+    if (isConnected) {
+      return;
+    }
 
-  mongoose.connect(MongoURI, {
-    
-  });
+    const MongoURI = process.env.DB_String;
 
-  let db = mongoose.connection;
+    if (!MongoURI) {
+      debug("DB_String is not set – skipping DB connection");
+      return;
+    }
 
-  db.on("open", () => {
+    await mongoose.connect(MongoURI, {
+      serverSelectionTimeoutMS: 5000,
+    });
+
+    isConnected = true;
     debug("MongoDb Connected Successfully");
-  });
-
-  db.on("error", () => {
-    debug("MongoDb Connection Error");
-  });
+  } catch (err) {
+    debug("MongoDb Connection Error", err.message);
+  }
 };
